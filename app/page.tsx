@@ -34,8 +34,8 @@ export default function Home() {
       </header>
 
       <main className="relative flex-1 flex flex-col gap-8 text-center items-center justify-center">
-        <h1 className="text-3xl font-bold sm:text-8xl">Coming Soon!</h1>
-        <p className="">Our team is working hard behing the scenes on developing the offical Lucky Effect website.</p>
+        <h1 className="text-4xl font-bold sm:text-6xl md:text-8xl">Coming Soon!</h1>
+        <p className="text-lg">Our team is working hard behing the scenes on developing the offical Lucky Effect website.</p>
       </main>
 
       <footer className="relative flex gap-6 flex-wrap justify-center mt-8">
