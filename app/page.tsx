@@ -12,7 +12,7 @@ const socials = [
 
 export default function Home() {
   return (
-    <div className="relative bg-[url(/img/IMG_4041.jpg)] md:bg-[url(/img/8-29-24.jpg)] bg-cover bg-center min-h-screen flex flex-col text-white p-8 pb-20 sm:p-20">
+    <div className="relative bg-cover bg-center min-h-screen flex flex-col text-white p-8 pb-20 sm:p-20 bg-home">
       <div className="absolute inset-0 bg-black/70"></div>
 
       <header className="relative flex gap-6 flex-wrap">
@@ -47,7 +47,7 @@ export default function Home() {
             rel={item.disabled ? undefined : "noopener noreferrer"}
             className={item.disabled ? "pointer-events-none opacity-50" : ""}
           >
-            <Image
+            <img
               className="fill-white"
               aria-hidden
               src={item.icon}
