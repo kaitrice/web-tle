@@ -1,6 +1,10 @@
-export default function Video() {
+export default function About() {
   return (
-    <div className="relative bg-cover bg-center min-h-screen flex flex-col text-white p-8 pb-20 sm:p-20 bg-home">
+    <div className="min-h-screen bg-bottom bg-home text-white">
+      <div className="heading-spacer" />
+      <section className="px-20 py-8 text-center justify-center">
+        <h1 className="text-3xl font-bold md:text-5xl">About</h1>
+      </section>
     </div>
   );
 }

@@ -30,6 +30,10 @@
       background-image: url('/img/IMG_3799.jpg');
     }
   }
+
+  .heading-spacer {
+    padding-top: 5em;
+  }
 }
 
 body {
