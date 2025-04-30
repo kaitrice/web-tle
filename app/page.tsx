@@ -1,52 +1,40 @@
-import Hero from "./_components/common/Hero";
+'use client'
 
-function Music() {
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+
+export default function PreviewPage() {
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const router = useRouter()
+
+  const handleSubmit = async () => {
+    const res = await fetch('/api', {
+      method: 'POST',
+      body: JSON.stringify({ password }),
+      headers: { 'Content-Type': 'application/json' }
+    })
+
+    if (res.ok) {
+      router.push('/preview')
+    } else {
+      setError('Incorrect password')
+    }
+  }
+
   return (
-    <section>
-      <h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Music</h2>
-      {/* Spotify singles widget */}
-    </section>
-  )
-}
-
-function Tour() {
-  return (
-    <section>
-      <h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Upcoming Shows</h2>
-      {/* BandsInTown widget */}
-    </section>
-  )
-}
-
-function Store() {
-  return (
-    <section>
-      <h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Store</h2>
-      {/* Shoptify item widget */}
-    </section>
-  )
-}
-
-function Video() {
-  return (
-    <section>
-      <h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Video</h2>
-      {/* Youtube widget small */}
-    </section>
-  )
-}
-
-export default function Home() {
-  return (
-    <div>
-      <Hero />
-
-      <main className="flex flex-col gap-16 text-center p-8">
-        <Music />
-        <Tour />
-        <Store />
-        <Video />
-      </main>
+    <div className="flex flex-col items-center justify-center h-screen text-white">
+      <input
+        type="password"
+        placeholder="Enter preview password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className="p-2 mb-4 bg-gray-800"
+      />
+      <button onClick={handleSubmit} className="px-4 py-2 bg-blue-600">
+        Submit
+      </button>
+      {error && <p className="mt-2 text-red-400">{error}</p>}
     </div>
-  );
+  )
 }
