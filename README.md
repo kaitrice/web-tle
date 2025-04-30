@@ -1,5 +1,5 @@
 
-![Logo](public\img\theluckyeffect_logo_transparent.png)
+![Logo](public/img/theluckyeffect_logo_transparent.png)
 
 
 # The Lucky Effect | Official Website
@@ -115,8 +115,8 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 
 ## Screenshots
 
-![Coming soon page](public\img\screencapture-comingsoon-desktop.png)
-![Coming soon page](public\img\screencapture-comingsoon-phone.png)
+![Coming soon page](public/img/screencapture-comingsoon-desktop.png)
+![Coming soon page](public/img/screencapture-comingsoon-phone.png)
 
 
 ## Roadmap
