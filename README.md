@@ -18,7 +18,20 @@ Band website built with Next.js, designed to showcase The Lucky Effect’s music
 ## Features
 
 - Live previews via [Vercel](https://vercel.com/)
+
 - Fully responsive and mobile-first
+
+- Light/dark mode toggle
+
+- Embedded Spotify music player
+
+- Latest YouTube videos
+
+- Real-time tour dates
+
+- Mailing list signup
+
+- Fast performance and SEO ready
 
 
 ## Tech Stack
@@ -121,18 +134,6 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 
 ## Roadmap
 
-- Light/dark mode toggle
-
-- Embedded Spotify music player
-
-- Latest YouTube videos
-
-- Real-time tour dates
-
-- Mailing list signup
-
-- Fast performance and SEO ready
-
 - Add Shopify merch store
 
 - Enable blog
@@ -142,7 +143,7 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 - Analytics with Google Analytics
 
 
-## Goal Optimizations
+## Optimizations
 
 - Pre-rendered with static generation (SSG) for performance
 
