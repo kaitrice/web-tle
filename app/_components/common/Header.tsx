@@ -1,5 +1,5 @@
-import Nav from "../ui/Navigation";
-import Banner from "../ui/Banner";
+import Nav from "../common/Navigation";
+import Banner from "../common/Banner";
 
 export default function Header() {
   const banner = false;

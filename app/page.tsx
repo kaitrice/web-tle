@@ -1,4 +1,4 @@
-import Hero from "./_components/ui/Hero";
+import Hero from "./_components/common/Hero";
 
 function Music() {
   return (
