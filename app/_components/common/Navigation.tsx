@@ -2,11 +2,11 @@ import Link from "next/link"
 import Logo from "./Logo"
 
 const nav_links = [
-    { subdir: "/music", name: <>Music</>, disabled: false },
-    { subdir: "/video", name: <>Video</>, disabled: false },
-    { subdir: "/tour", name: <>Tour</>, disabled: false },
-    { subdir: "/about", name: <>About</>, disabled: false }, 
-    { subdir: "/contact", name: <>Contact</>, disabled: false }, 
+    { subdir: "/preview/music", name: <>Music</>, disabled: false },
+    { subdir: "/preview/video", name: <>Video</>, disabled: false },
+    { subdir: "/preview/tour", name: <>Tour</>, disabled: false },
+    { subdir: "/preview/about", name: <>About</>, disabled: false }, 
+    { subdir: "/preview/contact", name: <>Contact</>, disabled: false }, 
     { subdir: "https://www.store.theluckyeffect.com/", name: <>Store</>, disabled: true },
 ]
 

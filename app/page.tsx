@@ -9,16 +9,20 @@ export default function PreviewPage() {
   const router = useRouter()
 
   const handleSubmit = async () => {
-    const res = await fetch('/api', {
-      method: 'POST',
-      body: JSON.stringify({ password }),
-      headers: { 'Content-Type': 'application/json' }
-    })
-
-    if (res.ok) {
+    try {
+      const res = await fetch('/api', {
+          method: 'POST',
+          body: JSON.stringify({ password }),
+          headers: { 'Content-Type': 'application/json' }
+      })
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(`Preview error: ${errorData.message || res.statusText}`);
+      }
       router.push('/preview')
-    } else {
-      setError('Incorrect password')
+    } catch (error) {
+        console.error(error)
+        setError('Incorrect password')
     }
   }
 

@@ -1,10 +1,12 @@
 import Hero from "../_components/common/Hero";
+import TrackWidget from "../_components/widgets/TrackWidget";
 
 function Music() {
   return (
     <section>
       <h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Music</h2>
       {/* Spotify singles widget */}
+      <TrackWidget />
     </section>
   )
 }
