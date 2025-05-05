@@ -4,7 +4,7 @@ interface Image {
     width: number;
 }
 
-interface Track {
+export type Track = {
     id: string;
     name: string;
     album_type: string;
