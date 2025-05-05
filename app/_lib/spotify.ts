@@ -6,22 +6,25 @@ async function fetchToken(): Promise<SpotifyToken | null> {
     
     const authString = Buffer.from(`${client_id}:${client_secret}`).toString('base64')
     try {
-        const response = await fetch('https://accounts.spotify.com/api/token', {
-        method: 'POST',
-        headers: {
-            'Authorization': `Basic ${authString}`,
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({ grant_type: 'client_credentials' }).toString(),
+        const res = await fetch('https://accounts.spotify.com/api/token', {
+            method: 'POST',
+            body: new URLSearchParams({ grant_type: 'client_credentials' }).toString(),
+            headers: {
+                'Authorization': `Basic ${authString}`,
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
         })
 
-        if (!response.ok) throw new Error(`Spotify auth failed: ${response.statusText}`)
+        if (!res.ok) {
+            const errorData = await res.json();
+            throw new Error(`Spotify auth failed: ${errorData.message || res.statusText}`);
+        }
 
         const data: {
-        access_token: string
-        token_type: string
-        expires_in: number
-        } = await response.json()
+            access_token: string
+            token_type: string
+            expires_in: number
+        } = await res.json()
 
         // const token = data.access_token
         // console.log('Access token:', token)

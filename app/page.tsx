@@ -15,10 +15,12 @@ export default function PreviewPage() {
           body: JSON.stringify({ password }),
           headers: { 'Content-Type': 'application/json' }
       })
+
       if (!res.ok) {
         const errorData = await res.json();
         throw new Error(`Preview error: ${errorData.message || res.statusText}`);
       }
+      
       router.push('/preview')
     } catch (error) {
         console.error(error)
