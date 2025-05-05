@@ -35,8 +35,8 @@ async function fetchToken(): Promise<Token | string> {
 
 export default async function getToken(): Promise<string> {
     let token: Token
-
-    if (!token) token = await fetchToken()
+    token = await fetchToken()
+    
     if (!token.access_token) throw new Error("Failed to retrieve token")
 
     return token.access_token
