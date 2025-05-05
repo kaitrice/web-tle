@@ -2,10 +2,10 @@ import getToken from "../_lib/spotify";
 import { TopTracks } from "../_types/spotify.types";
 
 async function fetchTopTracks(code: string): Promise<TopTracks> {
-    const id = "5Tr5sJICcc4lN5ppznL5fR"
+    const artistId = "5Tr5sJICcc4lN5ppznL5fR"
 
     try {
-        const res = await fetch(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=US`, {
+        const res = await fetch(`https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=US`, {
             method: "GET", 
             headers: { Authorization: `Bearer ${code}` }
         })
