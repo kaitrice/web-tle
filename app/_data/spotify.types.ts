@@ -15,4 +15,6 @@ interface Track {
     images: Image[];
 }
 
-export type TopTracks =  Track[]
+export type TopTracks =  {
+    tracks: Track[]
+}
