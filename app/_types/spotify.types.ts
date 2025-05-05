@@ -18,3 +18,9 @@ export type Track = {
 export type TopTracks =  {
     tracks: Track[]
 }
+
+export type SpotifyToken = {
+    access_token: string
+    token_type: string
+    expires_in: number
+}

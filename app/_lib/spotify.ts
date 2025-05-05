@@ -1,6 +1,6 @@
-import type { Token } from './spotify.types'
+import type { SpotifyToken } from './spotify.types'
 
-async function fetchToken(): Promise<Token | null> {
+async function fetchToken(): Promise<SpotifyToken | null> {
     const client_id = process.env.SPOTIFY_CLIENT_ID 
     const client_secret = process.env.SPOTIFY_CLIENT_SECRET
     
@@ -34,7 +34,7 @@ async function fetchToken(): Promise<Token | null> {
 }
 
 export default async function getToken(): Promise<string> {
-    const token: Token | null = await fetchToken()
+    const token: SpotifyToken | null = await fetchToken()
     
     if (!token) throw new Error("Failed to retrieve token")
 
