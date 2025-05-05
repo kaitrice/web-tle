@@ -15,4 +15,4 @@ interface Track {
     images: Image[];
 }
 
-type TopTracks =  Track[]
+export type TopTracks =  Track[]

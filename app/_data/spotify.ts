@@ -1,4 +1,5 @@
 import getToken from "../_lib/spotify";
+import { TopTracks } from "./spotify.types";
 
 async function fetchTopTracks(code: string): Promise<TopTracks> {
     const id = process.env.SPOTIFY_ARTIST_ID
