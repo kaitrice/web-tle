@@ -1,6 +1,6 @@
 import type { Token } from './spotify.types'
 
-async function fetchToken(): Promise<Token | string> {
+async function fetchToken(): Promise<Token | null> {
     const client_id = process.env.SPOTIFY_CLIENT_ID 
     const client_secret = process.env.SPOTIFY_CLIENT_SECRET
     
@@ -29,7 +29,7 @@ async function fetchToken(): Promise<Token | string> {
         return data
     } catch (error) {
         console.error('Error fetching token:', error)
-        return ''
+        return null
     }
 }
 
@@ -37,7 +37,7 @@ export default async function getToken(): Promise<string> {
     let token: Token
     token = await fetchToken()
     
-    if (!token.access_token) throw new Error("Failed to retrieve token")
+    if (!token) throw new Error("Failed to retrieve token")
 
     return token.access_token
 }
