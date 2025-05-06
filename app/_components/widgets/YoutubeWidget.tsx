@@ -16,7 +16,7 @@ function Player(video: Video) {
 }
 
 export async function YoutubeWidget() {
-    const data: Videos = await getVideos(5, null)
+    const data: Videos = await getVideos(5, false)
     const videos = data.items
     // console.log('videos: ', videos)
 
