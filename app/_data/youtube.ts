@@ -1,4 +1,4 @@
-import { Videos } from "../_types/youtube.type";
+import { Videos } from "../_types/youtube.type"
 
 async function fetchVideos(code: string, qty: number, channelId: string): Promise<Videos> {
     try {

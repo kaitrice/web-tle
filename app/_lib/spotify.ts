@@ -16,8 +16,8 @@ async function fetchToken(): Promise<SpotifyToken | null> {
         })
 
         if (!res.ok) {
-            const errorData = await res.json();
-            throw new Error(`Spotify auth failed: ${errorData.message || res.statusText}`);
+            const errorData = await res.json()
+            throw new Error(`Spotify auth failed: ${errorData.message || res.statusText}`)
         }
 
         const data: {

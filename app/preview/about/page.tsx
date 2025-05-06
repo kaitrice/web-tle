@@ -6,5 +6,5 @@ export default function About() {
         <h1 className="text-3xl font-bold md:text-5xl">About</h1>
       </section>
     </div>
-  );
+  )
 }

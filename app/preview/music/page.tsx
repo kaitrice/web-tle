@@ -6,5 +6,5 @@ export default function Music() {
         <h1 className="text-3xl font-bold md:text-5xl">Music</h1>
       </section>
     </div>
-  );
+  )
 }

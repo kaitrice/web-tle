@@ -4,5 +4,5 @@ export default function Hero() {
         {/* <div className="absolute inset-0 bg-white/50"></div> */}
     
     </div>
-  );
+  )
 }

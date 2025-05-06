@@ -1,4 +1,4 @@
-import Socials from "./Socials";
+import Socials from "./Socials"
 
 function Copyright() {
   return (
@@ -22,5 +22,5 @@ export default function Footer() {
       <Copyright />
       <Socials />
     </footer>
-  );
+  )
 }

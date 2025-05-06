@@ -1,11 +1,11 @@
-import "../globals.css";
+import "../globals.css"
 import Header from "../_components/common/Header"
-import Footer from "../_components/common/Footer";
+import Footer from "../_components/common/Footer"
 
 export default function PreviewLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
    <>
@@ -13,5 +13,5 @@ export default function PreviewLayout({
       {children}
       <Footer />
    </>
-  );
+  )
 }

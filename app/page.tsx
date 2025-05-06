@@ -17,8 +17,8 @@ export default function PreviewPage() {
       })
 
       if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(`Preview error: ${errorData.message || res.statusText}`);
+        const errorData = await res.json()
+        throw new Error(`Preview error: ${errorData.message || res.statusText}`)
       }
       
       router.push('/preview')

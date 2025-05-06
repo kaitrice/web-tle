@@ -1,5 +1,5 @@
-import getToken from "../_lib/spotify";
-import { TopTracks } from "../_types/spotify.types";
+import getToken from "../_lib/spotify"
+import { TopTracks } from "../_types/spotify.types"
 
 async function fetchTopTracks(code: string): Promise<TopTracks> {
     const artistId = "5Tr5sJICcc4lN5ppznL5fR"
@@ -11,11 +11,11 @@ async function fetchTopTracks(code: string): Promise<TopTracks> {
         })
     
         if (!res.ok) {
-            const errorData = await res.json();
-            throw new Error(`Preview error: ${errorData.message || res.statusText}`);
+            const errorData = await res.json()
+            throw new Error(`Preview error: ${errorData.message || res.statusText}`)
         }
     
-        return await res.json() ?? [];
+        return await res.json() ?? []
     } catch (error) {
         console.error(error)
         return { tracks: [] }

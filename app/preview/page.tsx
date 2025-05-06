@@ -1,6 +1,6 @@
-import Hero from "../_components/common/Hero";
-import SpotifyWidget from "../_components/widgets/SpotifyWidget";
-import { YoutubeWidget } from "../_components/widgets/YoutubeWidget";
+import Hero from "../_components/common/Hero"
+import SpotifyWidget from "../_components/widgets/SpotifyWidget"
+import { YoutubeWidget } from "../_components/widgets/YoutubeWidget"
 
 function Music() {
   return (
@@ -52,5 +52,5 @@ export default function Home() {
         <Video />
       </main>
     </div>
-  );
+  )
 }

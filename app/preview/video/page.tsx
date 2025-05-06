@@ -1,4 +1,4 @@
-import { YoutubeVideos } from "@/app/_components/widgets/YoutubeWidget";
+import { YoutubeVideos } from "@/app/_components/widgets/YoutubeWidget"
 
 export default function Video() {
   return (
@@ -9,5 +9,5 @@ export default function Video() {
         <YoutubeVideos />
       </section>
     </div>
-  );
+  )
 }

@@ -8,7 +8,7 @@ function Player(video: Video) {
             <iframe
                 src={`https://www.youtube.com/embed/${video.id.videoId}`}
                 className="w-full aspect-video"
-                allow="autoplay; encrypted-media"
+                allow="autoplay encrypted-media"
                 allowFullScreen
             />
         </div>
@@ -29,7 +29,7 @@ export async function YoutubeWidget() {
                 <></>
             }
         </section>
-    );
+    )
 }
 
 export async function YoutubeVideos() {
@@ -46,5 +46,5 @@ export async function YoutubeVideos() {
                 <></>
             }
         </section>
-    );
+    )
 }

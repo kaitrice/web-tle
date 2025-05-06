@@ -1,6 +1,6 @@
 import { getTracks } from "@/app/_data/spotify"
 import { Track } from "@/app/_types/spotify.types"
-import Image from "next/image";
+import Image from "next/image"
 import React from "react"
 
 function Card(track: Track) {

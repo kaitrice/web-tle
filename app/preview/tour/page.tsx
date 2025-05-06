@@ -6,5 +6,5 @@ export default function Tour() {
         <h1 className="text-3xl font-bold md:text-5xl">Tour</h1>
       </section>
     </div>
-  );
+  )
 }
