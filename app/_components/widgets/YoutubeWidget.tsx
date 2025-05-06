@@ -1,26 +1,50 @@
-import { getVideos } from "@/app/_data/youtube";
-import { Video, Videos } from "@/app/_types/youtube.type";
+import { getVideos } from "@/app/_data/youtube"
+import { Video, Videos } from "@/app/_types/youtube.type"
 import React from "react"
 
-export default async function YoutubeWidget() {
-  const data: Videos = await getVideos()
-  const videos = data.items
-  console.log('videos: ', videos)
-
-  return (
-    <main className="p-8">
-      {videos ? 
-        videos.slice(1).map((video: Video) => (
+function Player(video: Video) {
+    return (
+        <div className="">
             <iframe
-                key={video.id.videoId}
                 src={`https://www.youtube.com/embed/${video.id.videoId}`}
                 className="w-full aspect-video"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
             />
-        )) : 
-        <></>
-      }
-    </main>
-  );
+        </div>
+    )
+}
+
+export async function YoutubeWidget() {
+    const data: Videos = await getVideos(4)
+    const videos = data.items
+    // console.log('videos: ', videos)
+
+    return (
+        <section className="p-8 flex gap-4 justify-center">
+            {videos ?
+                videos.slice(1).map((video: Video) => (
+                    <Player key={video.id.videoId} {...video} />
+                )) :
+                <></>
+            }
+        </section>
+    );
+}
+
+export async function YoutubeVideos() {
+    const data: Videos = await getVideos(4)
+    const videos = data.items
+    // console.log('videos: ', videos)
+
+    return (
+        <section className="p-8 flex gap-4 justify-center">
+            {videos ?
+                videos.slice(1).map((video: Video) => (
+                    <Player key={video.id.videoId} {...video} />
+                )) :
+                <></>
+            }
+        </section>
+    );
 }

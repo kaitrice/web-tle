@@ -3,12 +3,15 @@ import { Image } from './common.type'
 export type Track = {
     id: string;
     name: string;
-    album_type: string;
-    release_date: string;
+    album: {
+        id: string;
+        album_type: string;
+        release_date: string;
+        images: Image[];
+    };
     external_urls: {
         spotify: string
     };
-    images: Image[];
 }
 
 export type TopTracks =  {
