@@ -16,12 +16,12 @@ function Player(video: Video) {
 }
 
 export async function YoutubeWidget() {
-    const data: Videos = await getVideos(4)
+    const data: Videos = await getVideos(5, null)
     const videos = data.items
     // console.log('videos: ', videos)
 
     return (
-        <section className="p-8 flex gap-4 justify-center">
+        <section className="p-8 flex flex-wrap gap-4 sm:gap-10 justify-center">
             {videos ?
                 videos.slice(1).map((video: Video) => (
                     <Player key={video.id.videoId} {...video} />
@@ -33,14 +33,14 @@ export async function YoutubeWidget() {
 }
 
 export async function YoutubeVideos() {
-    const data: Videos = await getVideos(4)
+    const data: Videos = await getVideos(100, true)
     const videos = data.items
     // console.log('videos: ', videos)
 
     return (
-        <section className="p-8 flex gap-4 justify-center">
+        <section className="p-8 flex flex-wrap gap-4 sm:gap-10 justify-center">
             {videos ?
-                videos.slice(1).map((video: Video) => (
+                videos.slice(2).map((video: Video) => (
                     <Player key={video.id.videoId} {...video} />
                 )) :
                 <></>
