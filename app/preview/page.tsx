@@ -1,5 +1,6 @@
 import Hero from "../_components/common/Hero";
 import TrackWidget from "../_components/widgets/TrackWidget";
+import YoutubeWidget from "../_components/widgets/YoutubeWidget";
 
 function Music() {
   return (
@@ -34,6 +35,7 @@ function Video() {
     <section>
       <h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Video</h2>
       {/* Youtube widget small */}
+      <YoutubeWidget />
     </section>
   )
 }
