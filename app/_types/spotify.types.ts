@@ -1,8 +1,4 @@
-interface Image {
-    url: string;
-    height: number;
-    width: number;
-}
+import { Image } from './common.type'
 
 export type Track = {
     id: string;
