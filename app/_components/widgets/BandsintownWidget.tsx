@@ -22,7 +22,7 @@ export default async function BandsintownWidget() {
         <section className="flex justify-center gap-6 p-8 bg-neutral-800 rounded-xl">
             {tourDates ?
                 tourDates.map((track: Track) => (
-                    <Card key={track.id} {...track} />
+                    <TourDate key={track.id} {...track} />
                 )) :
                 <>no tour dates available</>
             }
