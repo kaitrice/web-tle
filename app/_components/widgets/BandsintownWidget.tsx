@@ -2,8 +2,8 @@ import { getTourDates } from "@/app/_data/bandsintown"
 import { Track } from "@/app/_types/spotify.types"
 import React from "react"
 
-function TourDate(show: Track) {
-    const images = show.
+function TourDate(track: Track) {
+    const images = track.album.images
     // console.log(images)
 
     return (
