@@ -1,10 +1,13 @@
+import BandsintownWidget from "@/app/_components/widgets/BandsintownWidget";
+
 export default function Tour() {
   return (
-    <div className="min-h-screen bg-left bg-home text-white">
+    <main className="min-h-screen bg-left bg-home text-white text-center justify-center px-20 py-8">
       <div className="heading-spacer" />
-      <section className="px-20 py-8 text-center justify-center">
-        <h1 className="text-3xl font-bold md:text-5xl">Tour</h1>
+      <h1 className="text-3xl font-bold md:text-5xl">Tour</h1>
+      <section className="">
+        <BandsintownWidget />
       </section>
-    </div>
+    </main>
   )
 }
