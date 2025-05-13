@@ -26,15 +26,15 @@ function Tour() {
 	)
 }
 
-function Store() {
-	return (
-		<section className="p-2 md:p-6">
-			<h2 className="underline underline-offset-6 text-orange-900 text-2xl font-bold mb-6 sm:text-4xl md:text-6xl">Store</h2>
-			{/* Shoptify item widget */}
-			<Button label="Shop Here" end="https://www.store.theluckyeffect.com" />
-		</section>
-	)
-}
+// function Store() {
+// 	return (
+// 		<section className="p-2 md:p-6">
+// 			<h2 className="underline underline-offset-6 text-orange-900 text-2xl font-bold mb-6 sm:text-4xl md:text-6xl">Store</h2>
+// 			{/* Shoptify item widget */}
+// 			<Button label="Shop Here" end="https://www.store.theluckyeffect.com" />
+// 		</section>
+// 	)
+// }
 
 function Video() {
 	return (
