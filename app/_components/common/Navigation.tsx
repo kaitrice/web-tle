@@ -11,10 +11,6 @@ const nav_links = [
 	{ subdir: "/preview/contact", name: <>Contact</>, disabled: false },
 ]
 
-function Hamburger() {
-
-}
-
 export default function Nav() {
 	return (
 		<nav className="fixed top-0 min-w-screen flex items-center justify-center font-bold bg-black/70 text-neutral-100 gap-2 text-xs p-4 sm:gap-12 md:text-base">
