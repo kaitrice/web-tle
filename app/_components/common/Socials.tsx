@@ -3,20 +3,20 @@ import Image from "next/image"
 import { Social } from "@/app/_types/socials.type"
 
 const socials = [
-    { url: "https://www.instagram.com/theluckyeffectt/", icon: "/svg/white/icons8-instagram.svg", alt: "Instagram icon", disabled: false },
-    { url: "https://www.tiktok.com/@theluckyeffectt?lang=en", icon: "/svg/white/icons8-tiktok.svg", alt: "TikTok icon", disabled: false },
-    { url: "https://www.youtube.com/@TheLuckyEffect77", icon: "/svg/white/icons8-youtube.svg", alt: "YouTube icon", disabled: false },
-    { url: "mailto:theluckyeffect77@gmail.com", icon: "/svg/white/mail-white.svg", alt: "Envelope icon", disabled: false },
-    { url: "https://music.apple.com/us/artist/the-lucky-effect/1790610682", icon: "/svg/white/icons8-music.svg", alt: "Apple music icon", disabled: false },
-    { url: "https://open.spotify.com/artist/5Tr5sJICcc4lN5ppznL5fR", icon: "/svg/white/icons8-spotify.svg", alt: "Spotify icon", disabled: false },
-    { url: "https://shop.theluckyeffect.com", icon: "/svg/white/icons8-shopify.svg", alt: "Shopify icon", disabled: true },
+    { url: "https://www.instagram.com/theluckyeffectt/", icon: "/svg/black/instagram.svg", alt: "Instagram icon", disabled: false },
+    { url: "https://www.tiktok.com/@theluckyeffectt?lang=en", icon: "/svg/black/tiktok.svg", alt: "TikTok icon", disabled: false },
+    { url: "https://www.youtube.com/@TheLuckyEffect77", icon: "/svg/black/youtube.svg", alt: "YouTube icon", disabled: false },
+    // { url: "mailto:theluckyeffect77@gmail.com", icon: "/svg/black/mail.svg", alt: "Envelope icon", disabled: false },
+    { url: "https://music.apple.com/us/artist/the-lucky-effect/1790610682", icon: "/svg/black/music.svg", alt: "Apple music icon", disabled: false },
+    { url: "https://open.spotify.com/artist/5Tr5sJICcc4lN5ppznL5fR", icon: "/svg/black/spotify.svg", alt: "Spotify icon", disabled: false },
+    // { url: "https://shop.theluckyeffect.com", icon: "/svg/black/shopify.svg", alt: "Shopify icon", disabled: true },
 ]
 
 function SocialUI(data: Social) {
     const { url, icon, alt, disabled } = data
 
     return (
-      <Link href={disabled ? "#" : url} className="hover:underline hover:underline-offset-6">
+      <Link href={disabled ? "#" : url} className="hover:text-orange-500">
         <div>  
           <Image
             aria-hidden
@@ -32,7 +32,7 @@ function SocialUI(data: Social) {
 
 export default function Socials() {
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 mb-2">
       {socials.map((item, index) => (
         <SocialUI key={index} {... item} />
       ))}

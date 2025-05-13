@@ -8,10 +8,10 @@ export default function PreviewLayout({
   children: React.ReactNode
 }>) {
   return (
-   <>
+   <div className="text-slate-800 bg-orange-50">
       <Header />
       {children}
       <Footer />
-   </>
+   </div>
   )
 }

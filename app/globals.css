@@ -21,18 +21,17 @@
 
 @layer utilities {
   .bg-home {
-    background-image: url("/img/IMG_4041.jpg");
-  }
-  
-  @media (min-width: 768px) {
-    .bg-home {
-      background-image: url('/img/8-29-24.jpg');
-      /* background-image: url("/img/IMG_3799.JPG"); */
-    }
+    background-image: url("/img/lucky-hero.jpg");
   }
 
   .heading-spacer {
-    padding-top: 5em;
+    padding-top: 6em;
+  }
+
+  @media (min-width: 768px) {
+    .heading-spacer {
+      padding-top: 8em;
+    }
   }
 }
 

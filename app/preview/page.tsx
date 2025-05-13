@@ -6,8 +6,8 @@ import { YoutubeWidget } from "../_components/widgets/YoutubeWidget"
 
 function Music() {
 	return (
-		<section>
-			<h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Music</h2>
+		<section className="p-2 md:p-6">
+			<h2 className="underline underline-offset-6 text-orange-900 text-2xl font-bold mb-6 sm:text-4xl md:text-6xl">Music</h2>
 			{/* Spotify singles widget */}
 			<SpotifyWidget />
 			<Button label="Full Discography" end="/preview/music" />
@@ -17,10 +17,10 @@ function Music() {
 
 function Tour() {
 	return (
-		<section>
-			<h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Upcoming Shows</h2>
+		<section className="py-10 px-6 md:px-50">
+			<h2 className="underline underline-offset-6 text-orange-900 text-2xl font-bold mb-6 sm:text-4xl md:text-6xl">Upcoming Shows</h2>
 			{/* BandsInTown widget */}
-			<BandsintownWidget />
+			<BandsintownWidget max="5" />
 			<Button label="View All" end="/preview/tour" />
 		</section>
 	)
@@ -28,8 +28,8 @@ function Tour() {
 
 function Store() {
 	return (
-		<section>
-			<h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Store</h2>
+		<section className="p-2 md:p-6">
+			<h2 className="underline underline-offset-6 text-orange-900 text-2xl font-bold mb-6 sm:text-4xl md:text-6xl">Store</h2>
 			{/* Shoptify item widget */}
 			<Button label="Shop Here" end="https://www.store.theluckyeffect.com" />
 		</section>
@@ -38,8 +38,8 @@ function Store() {
 
 function Video() {
 	return (
-		<section>
-			<h2 className="text-2xl font-bold mb-8 sm:text-4xl md:text-6xl">Video</h2>
+		<section className="p-2 md:p-6">
+			<h2 className="underline underline-offset-6 text-orange-900 text-2xl font-bold mb-6 sm:text-4xl md:text-6xl">Video</h2>
 			{/* Youtube widget small */}
 			<YoutubeWidget />
 			<Button label="Watch More" end="/preview/video" />
@@ -52,9 +52,9 @@ export default function Home() {
 		<main>
 			<Hero />
 
-			<div className="flex flex-col gap-16 text-center p-8 bg-orange-500 text-white">
-				<Music />
+			<div className="flex flex-col gap-0 text-center mb-10">
 				<Tour />
+				<Music />
 				{/* <Store /> */}
 				<Video />
 			</div>

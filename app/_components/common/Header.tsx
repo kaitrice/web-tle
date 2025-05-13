@@ -5,7 +5,7 @@ export default function Header() {
   const banner = false
 
   return (
-    <header className="absolute top-0 w-full z-1 text-white ">
+    <header className="absolute top-0 w-full z-1">
       {banner ? <Banner /> : null}
 
       <Nav />
