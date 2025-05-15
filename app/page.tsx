@@ -29,7 +29,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Music
+          More
         </a>
       </header>
 
