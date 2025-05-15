@@ -25,7 +25,7 @@ export default function Home() {
         />
         <a
           className="flex-1 text-end hover:underline hover:underline-offset-6"
-          href="https://bio.site/Theluckyeffect"
+          href="https://linktr.ee/theluckyeffect77"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+![Logo](public/img/theluckyeffect_logo_transparent.png)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# The Lucky Effect | Official Website
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Band website built with Next.js, designed to showcase The Lucky Effect’s music, videos, tour dates, and more. This project will connect to platforms like Spotify, YouTube, and Bandsintown to streamline updates and provide fans with real-time updates and media.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Badges
 
-## Learn More
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://figma.com/)
+[![Next JS](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Live preview site via [Vercel](https://vercel.com/)
 
-## Deploy on Vercel
+- Mobile-first responsive design 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Embedded Spotify music player
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Latest YouTube videos
+
+- Real-time tour dates
+
+- Fast performance and SEO ready
+
+
+## Tech Stack
+
+**Frontend:** Next.js, React, TailwindCSS
+
+**Deployment:** Vercel
+
+**APIs:**
+
+- Spotify Web API – stream music and show album details
+
+- YouTube Data API – watch music videos
+
+- Bandsintown API – live tour data
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`SPOTIFY_CLIENT_ID`
+
+`SPOTIFY_CLIENT_SECRET`
+
+`YOUTUBE_API_KEY`
+
+`PREVIEW_PASSWORD` *optional
+
+
+## Roadmap
+
+- Add Shopify merch store
+
+- Enable blog
+
+- Expand SEO
+
+- Analytics with Google Analytics
+
+
+## Optimizations
+
+- Lazy-loaded media content
+
+- Accessibility improvements (ARIA, alt text, contrast)
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Acknowledgements
+
+[Next.js Documentation](https://nextjs.org/docs)
+
+[Tailwind CSS](https://tailwindcss.com/)
+
+[Spotify for Developers](https://developer.spotify.com/)
+
+[YouTube Data API](https://developers.google.com/youtube/v3)
+
+[Bandsintown Artist API](https://artists.bandsintown.com/support/api-docs)
