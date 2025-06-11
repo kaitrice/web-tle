@@ -6,9 +6,9 @@ const socials = [
     { url: "https://www.instagram.com/theluckyeffectt/", icon: "/svg/black/instagram.svg", alt: "Instagram icon", disabled: false },
     { url: "https://www.tiktok.com/@theluckyeffectt?lang=en", icon: "/svg/black/tiktok.svg", alt: "TikTok icon", disabled: false },
     { url: "https://www.youtube.com/@TheLuckyEffect77", icon: "/svg/black/youtube.svg", alt: "YouTube icon", disabled: false },
-    // { url: "mailto:theluckyeffect77@gmail.com", icon: "/svg/black/mail.svg", alt: "Envelope icon", disabled: false },
     { url: "https://music.apple.com/us/artist/the-lucky-effect/1790610682", icon: "/svg/black/music.svg", alt: "Apple music icon", disabled: false },
     { url: "https://open.spotify.com/artist/5Tr5sJICcc4lN5ppznL5fR", icon: "/svg/black/spotify.svg", alt: "Spotify icon", disabled: false },
+    // { url: "mailto:theluckyeffect77@gmail.com", icon: "/svg/black/mail.svg", alt: "Envelope icon", disabled: false },
     // { url: "https://shop.theluckyeffect.com", icon: "/svg/black/shopify.svg", alt: "Shopify icon", disabled: true },
 ]
 
@@ -32,7 +32,7 @@ function SocialUI(data: Social) {
 
 export default function Socials() {
   return (
-    <div className="flex gap-3 mb-2">
+    <div className="flex gap-3">
       {socials.map((item, index) => (
         <SocialUI key={index} {... item} />
       ))}

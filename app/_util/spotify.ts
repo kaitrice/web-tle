@@ -1,4 +1,4 @@
-import { SpotifyToken } from "../_types/spotify.types"
+import { SpotifyToken, TopTracks } from "../_types/spotify.types"
 
 async function fetchToken(): Promise<SpotifyToken | null> {
     const client_id = process.env.SPOTIFY_CLIENT_ID 
@@ -36,10 +36,38 @@ async function fetchToken(): Promise<SpotifyToken | null> {
     }
 }
 
-export default async function getToken(): Promise<string> {
+async function getToken(): Promise<string> {
     const token: SpotifyToken | null = await fetchToken()
     
     if (!token) throw new Error("Failed to retrieve token")
 
     return token.access_token
+}
+
+
+async function fetchTopTracks(code: string): Promise<TopTracks> {
+    const artistId = "5Tr5sJICcc4lN5ppznL5fR"
+
+    try {
+        const res = await fetch(`https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=US`, {
+            method: "GET", 
+            headers: { Authorization: `Bearer ${code}` }
+        })
+    
+        if (!res.ok) {
+            const errorData = await res.json()
+            throw new Error(`Preview error: ${errorData.message || res.statusText}`)
+        }
+    
+        return await res.json() ?? []
+    } catch (error) {
+        console.error(error)
+        return { tracks: [] }
+    }
+}
+
+export async function getTracks(): Promise<TopTracks> {
+    const code = await getToken()
+
+    return fetchTopTracks(code)
 }

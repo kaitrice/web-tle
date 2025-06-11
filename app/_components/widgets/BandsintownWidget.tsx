@@ -2,24 +2,23 @@
 import React, { useEffect } from "react"
 
 type Props = {
-	max: string
+    max: string
 }
 
-export default function BandsintownWidget({ max }: Props) {
+export function TourWidget({ max }: Props) {
     useEffect(() => {
-		const script = document.createElement('script');
-		script.src = 'https://widgetv3.bandsintown.com/main.min.js';
-		script.async = true;
-		script.charset = 'utf-8';
-		document.body.appendChild(script);
-	}, []);
+        const script = document.createElement('script');
+        script.src = 'https://widgetv3.bandsintown.com/main.min.js';
+        script.async = true;
+        script.charset = 'utf-8';
+        document.body.appendChild(script);
+    }, []);
 
     return (
-        <section>
-            <a className="bit-widget-initializer"
+        <a className="bit-widget-initializer"
 
             data-artist-name="id_15591806"
-                
+
             data-events-to-display=""
             data-background-color="rgba(255,237,212,0)"
             data-separator-color="rgba(221,221,221,1)"
@@ -112,9 +111,14 @@ export default function BandsintownWidget({ max }: Props) {
             data-affil-code=""
             data-bit-logo-position="hidden"
             data-bit-logo-color="rgba(29,41,61,1)"
-            
-            ></a>
-        </section>
+
+        ></a>
+    )
+}
+
+export function SubscribeWidget() {
+    return (
+        <iframe src="https://bandsintown.com/artist/15591806/email_signup_form?headerTextColor=rgba(255,247,237,1)&backgroundColor=rgba(208,135,0,1)&ctaBackgroundColor=rgba(209,213,220,1)&title=MAILING LIST&headerTextStyle=normal&headerText=Sign up to get the latest updates&font=&ctaIcon=hide&ctaBorderRadius=4px&ctaBorderWidth=2px&ctaBorderColor=rgba(255,247,237,1)&ctaFontColor=rgba(74,74,74,1)&alignment=center&emailInputField=show&ctaLabel=Subscribe&layout=wide&locale=en&ctaSize=small" width="100%" height="220px" title="newsletter-widget"></iframe>
     )
 }
 

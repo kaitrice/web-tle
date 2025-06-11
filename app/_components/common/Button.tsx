@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ label, end }) => {
   return (
-    <Link href={end} className="p-4 hover:underline hover:underline-offset-6">
+    <Link href={end} className="p-4 hover:underline hover:underline-offset-6 text-yellow-600 font-bold">
       {label}
     </Link>
   )
