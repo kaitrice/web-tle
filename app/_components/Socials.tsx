@@ -19,7 +19,7 @@ type SocialUIProps = {
 
 function SocialUI({ data, flag }: SocialUIProps) {
   const { url, alt } = data
-  var { icon } = data
+  let { icon } = data
 
   if (flag) {
     icon = icon.replace("black", "white")
