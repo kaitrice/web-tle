@@ -44,11 +44,11 @@ export default function About() {
       <section className="flex flex-col gap-4 sm:text-lg p-6">
         <p>The Lucky Effect is an indie-pop / alternative rock band from Southern California. Known for their high-energy live shows, catchy tunes, and authenticity, the band blends infectious pop melodies with rock-rooted intensity, drawing from a wide range of musical education and influences. The Lucky Effect is reimagining conventional pop into something entirely their own.</p>
         
-        <p>Their show at Hotel Ziggy in West Hollywood (May 13, 2025) garnered rave reviews. Highwire Daze praised their “absolutely exhilarating set” and cheered that they "nearly blew the roof off the Hotel Ziggy.” The band received kudos for delivering “superbly infectious tunes and good-time demeanor,” powered by a “devastatingly talented rhythm section”. Their single "Call It Love" was hailed as “a song that should be raging all over the worldwide radio airwaves” .</p>
+        <p>Their show at Hotel Ziggy in West Hollywood (May 13, 2025) garnered rave reviews. Highwire Daze praised their &quot;absolutely exhilarating set&quot; and cheered that they &quot;nearly blew the roof off the Hotel Ziggy.&quot; The band received kudos for delivering &quot;superbly infectious tunes and good-time demeanor,&quot; powered by a &quot;devastatingly talented rhythm section&quot;. Their single &quot;Call It Love&quot; was hailed as “a song that should be raging all over the worldwide radio airwaves&quot; .</p>
         
         <Gallery />
         
-        <p>Co lead by duel guitarist and singers Moses Navarro and Ian East, supported by Patrick East on bass and Kaiawe Miyasato on drums, The Lucky Effect delivers a blend of high energy and raw emotion. Their synergy has been noted as a driving force behind their “charged” live aura.</p>
+        <p>Co lead by duel guitarist and singers Moses Navarro and Ian East, supported by Patrick East on bass and Kaiawe Miyasato on drums, The Lucky Effect delivers a blend of high energy and raw emotion. Their synergy has been noted as a driving force behind their &quot;charged&quot; live aura.</p>
         
         <p>The band has been featured across Los Angeles and Orange County, including standout appearances at Hotel Ziggy, Fiesta Hermosa, and upcoming dates at Kiss Kiss Bang Bang (June 27, 2025) and The Mint in LA (July 10, 2025). Their live reputation continues to grow as they headline dynamic indie-pop lineups.</p>
       </section>

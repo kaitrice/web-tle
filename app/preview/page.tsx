@@ -19,7 +19,7 @@ function News() {
 				</Card>
 				<Card url="https://boldjourney.com/meet-the-lucky-effect/" img="/img/news/boldjourney.webp" alt="">
 					<div className="flex flex-col gap-1 px-8">
-						<h2 className="font-bold text-xl">Bold Journey Magazine - "Meet The Lucky Effect"</h2>
+						<h2 className="font-bold text-xl">Bold Journey Magazine - &quot;Meet The Lucky Effect&quot;</h2>
 						<p>April 2, 2025</p>
 					</div>
 				</Card>

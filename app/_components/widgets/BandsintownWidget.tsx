@@ -1,10 +1,6 @@
 'use client'
 import React, { useEffect } from "react"
 
-type Props = {
-    max: string
-}
-
 export function TourWidget({ max }: {max: string}) {
     useEffect(() => {
         const script = document.createElement('script');
