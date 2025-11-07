@@ -1,10 +1,46 @@
+import { testdata } from "../_util/testdata";
+import { CardSquare } from "../_components/Card";
+import Image from "next/image";
+
+function Track({ data }: { data: any }) {
+  return (
+    <CardSquare img={data.images[0].url} alt={data.name}>
+      <div className="flex flex-col gap-6 px-8">
+        <h2 className="font-bold text-lg sm:text-2xl">{data.name}</h2>
+        <div className="flex flex-col gap-4 sm:flex-row justify-around">
+          <a target="_blank" href={data.external_urls.apple}>
+            <Image
+              src="/svg/apple_full.svg"
+              alt=""
+              width={124}
+              height={124}
+            />
+          </a>
+          <a target="_blank" href={data.external_urls.spotify}>
+            <Image
+              src="/svg/spotify_full.svg"
+              alt=""
+              width={124}
+              height={124}
+            />
+          </a>
+        </div>
+      </div>
+    </CardSquare>
+  )
+}
+
 export default function Music() {
   return (
-    <main className="min-h-screen text-center justify-center px-15">
+    <main className="min-h-screen text-center justify-center px-6 xl:px-100">
       <div className="heading-spacer" />
-      <section className="">
-        <h1 className="uppercase tracking-widest text-4xl font-bold">Music</h1>
-      </section>
+      <h1 className="text-center uppercase tracking-widest text-2xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">Listen to our Music</h1>
+      <div className="flex flex-col xl:flex-row gap-12 justify-center items-center pt-2 md:pt-8 pb-12">
+        {testdata.map((item, index) => (
+          <Track key={index} data={item} />
+        ))}
+      </div>
+      <div className="w-full border-2" />
     </main>
   )
 }

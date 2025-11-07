@@ -32,9 +32,9 @@ export function Card({ url, img, alt, flag, children }: { url: string; img: stri
 	)
 }
 
-export function CardLarge({ url, img, alt, flag, children }: { url: string; img: string; alt: string; flag?: boolean; children?: React.ReactNode; }) {
+export function CardSquare({ img, alt, flag, children }: { img: string; alt: string; flag?: boolean; children?: React.ReactNode; }) {
 	return (
-		<Link href={url} className="w-full max-w-lg flex flex-col items-center">
+		<section className="w-full max-w-lg flex flex-col items-center">
 			<div className="relative w-full overflow-hidden shadow-lg group">
 				{/* Full-card overlay */}
 				{flag && (
@@ -59,7 +59,7 @@ export function CardLarge({ url, img, alt, flag, children }: { url: string; img:
 			{!flag && (
 				<div className="mt-4 w-full text-center">{children}</div>
 			)}
-		</Link>
+		</section>
 	)
 }
 

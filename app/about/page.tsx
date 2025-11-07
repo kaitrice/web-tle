@@ -2,8 +2,8 @@ import { Card } from "@/app/_components/Card"
 
 function News() {
   return (
-    <section id="news" className="">
-      <h1 className="text-center uppercase tracking-widest text=xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">In the news</h1>
+    <section id="news" className="pb-6">
+      <h1 className="text-center uppercase tracking-widest text-xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">In the news</h1>
       <div className="flex flex-col md:flex-row justify-center gap-6 p-2 md:p-6">
         <Card url="https://highwiredaze.com/2025/05/23/theluckyeffectwfnm1/" img="/img/news/highwiredaze.webp" alt="">
           <div className="flex flex-col gap-1 px-8">
@@ -24,8 +24,8 @@ function News() {
 
 function Gallery() {
   return (
-    <section id="band" className="">
-      <h1 className="text-center uppercase tracking-widest text=xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">The Band</h1>
+    <section id="band" className="w-full pb-6">
+      <h1 className="text-center uppercase tracking-widest text-2xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">The Band</h1>
       <div className="flex flex-col md:flex-row justify-center gap-6 p-2 md:p-6">
         <Card url="/about#band" img="/img/band/moses.webp" alt="Moses Navarro">
           <div>
@@ -60,10 +60,11 @@ function Gallery() {
 
 export default function About() {
   return (
-    <main className="min-h-screen text-center justify-center px-100">
+    <main className="min-h-screen text-center justify-center px-6 xl:px-100">
       <div className="heading-spacer" />
       <Gallery />
       <News />
+      <div className="w-full border-2" />
     </main>
   )
 }

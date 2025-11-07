@@ -8,7 +8,7 @@ const nav_links = [
 	{ subdir: "/music", name: <>Music</>, disabled: false },
 	{ subdir: "https://www.youtube.com/@TheLuckyEffect77", name: <>Videos</>, disabled: false },
 	{ subdir: "https://bnds.us/p601dx", name: <>Shows</>, disabled: false },
-	{ subdir: "https://www.store.theluckyeffect.com/", name: <>Store</>, disabled: true },
+	// { subdir: "https://www.store.theluckyeffect.com/", name: <>Store</>, disabled: true },
 	{ subdir: "/about", name: <>About</>, disabled: false },
 ]
 
@@ -35,7 +35,7 @@ export default function Header() {
 
 	return (
 		<header className={`z-1 absolute top-0 w-full ${isHome ? 'text-neutral-100' : ''}`}>
-			<nav className="w-full flex items-center justify-between py-4 px-2 sm:px-100">
+			<nav className="w-full flex items-center justify-between py-4 px-6 lg:px-12 xl:px-100">
 				<Link href={"/"}>
 					<Logo />
 				</Link>
@@ -52,7 +52,10 @@ export default function Header() {
 					)
 				)}
 				</div>
-				<Socials />
+				
+				<span className="hidden md:flex">
+					<Socials flag={isHome} />
+				</span>
 			</nav>
 		</header>
 	)

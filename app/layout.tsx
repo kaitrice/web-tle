@@ -19,12 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
-        <div className="text-slate-800 bg-orange-50">
-              <Header />
-              {children}
-              <Footer />
-           </div>
+      <body className="text-slate-800 bg-orange-50 antialiased">
+        <Header />
+        {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

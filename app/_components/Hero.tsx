@@ -1,25 +1,20 @@
 'use client'
 import Image from "next/image"
+import Link from "next/link";
 import { useState } from "react"
 
 export function Hero() {
-  return (
-	<section className="relative w-full aspect-3/2 md:aspect-6/2">
-		<div className="relative w-full h-full">
-			<Image
-				src="/img/hero/band_gig.JPG"
-				alt="Band playing a gig"
-				className="w-full h-full object-cover"
-				loading="lazy"
-				width={1000}
-				height={1000}
-			/>
-			<div className="absolute inset-0 flex items-end justify-center bg-black/50 text-white py-2 md:py-12">
-				<h1 className="uppercase tracking-widest text=xl md:text-4xl font-bold">About</h1>
+	return (
+		<section className="hero-bg flex justify-center items-center text-white">
+			<div className="border-12 flex justify-center items-end pb-32 w-5/6 h-2/3">
+				<Link href='/music'>
+					<p className="text-center w-2/3 md:w-auto border-2 p-4 font-black text-xl uppercase mx-auto">
+						Listen to our latest single
+					</p>
+				</Link>
 			</div>
-		</div>
-	</section>
-  )
+		</section>
+	)
 }
 
 export function HeroVideo() {
@@ -39,7 +34,7 @@ export function HeroVideo() {
 			) : (
 				<div className="relative w-full h-full">
 					<Image
-						src="/img/hero/test.gif"
+						src="/img/hero/hero.gif"
 						alt="Video preview"
 						className="w-full h-full object-cover"
 						loading="lazy"

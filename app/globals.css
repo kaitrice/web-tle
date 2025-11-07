@@ -7,12 +7,12 @@
 
 @layer utilities {
   .heading-spacer {
-    padding-top: 6em;
+    padding-top: 4em;
   }
 
   @media (min-width: 768px) {
     .heading-spacer {
-      padding-top: 8em;
+      padding-top: 6em;
     }
   }
 }
@@ -40,3 +40,16 @@ body {
 h1 {
     font-family: 'Rans', sans-serif;
 }
+
+.hero-bg {
+    background-image: url('/img/hero/hero_photoshoot_vertical.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    @media (min-width: 768px) {
+      background-image: url('/img/hero/hero_photoshoot.jpg');
+    }
+}
+
