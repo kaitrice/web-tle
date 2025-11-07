@@ -30,19 +30,19 @@
 }
 
 @font-face {
-    font-family: 'Rans';
+    font-family: 'Gloock';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('/font/rans____.ttf') format('truetype');
+    src: url('/font/Gloock-Regular.ttf') format('truetype');
 }
 
 body {
-    font-family: 'Cabin', sans-serif;
+    font-family: "Cabin", sans-serif;
 }
 
 h1 {
-    font-family: 'Rans', sans-serif;
+    font-family: "Gloock", serif;
 }
 
 .hero-bg {
