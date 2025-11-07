@@ -1,6 +1,6 @@
 export const merch = [
     {
-        type: "unisex t-shirt",
+        type: "unisex band t-shirt",
         color: "black",
         price: 20.00,
         currency: "USD",
@@ -8,7 +8,7 @@ export const merch = [
         url: "https://tr.ee/x4kc2eWj9H"
     },
     {
-        type: "unisex t-shirt",
+        type: "unisex logo t-shirt",
         color: "white",
         price: 20.00,
         currency: "USD",
