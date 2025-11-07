@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
 import Socials from "./Socials"
+import Link from "next/link"
 
 const nav_links = [
 	{ name: "Music", subdir: "/#music" },
@@ -46,9 +46,9 @@ export default function Header() {
 	return (
 		<header className={`absolute top-0 z-1 w-full ${isHome ? 'text-neutral-100' : ''}`}>
 			<nav className="w-full flex flex-col gap-2 md:flex-row md:gap-0 items-center justify-between py-4 px-6 lg:px-12 xl:px-100">
-				<a href="/">
+				<Link href="/">
 					<Logo />
-				</a>
+				</Link>
 				<Navigation />
 				<Socials flag={isHome} />
 			</nav>

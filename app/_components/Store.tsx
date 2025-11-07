@@ -1,8 +1,9 @@
 import { merch } from "../_data/merch_testdata"
+import { Merch as MerchType } from "../_util/merch.type"
 import { Button } from "./Button"
 import { Card } from "./Card"
 
-function Merch({ data }: { data: any }) {
+function Merch({ data }: { data: MerchType }) {
   return (
     <div className=" p-4">
       <Card img={data.img} alt={`Photo of ${data.color} ${data.type}`}>
