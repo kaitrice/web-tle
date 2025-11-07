@@ -2,15 +2,14 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import Socials from "./Socials"
 
 const nav_links = [
 	{ subdir: "/music", name: <>Music</>, disabled: false },
 	{ subdir: "https://www.youtube.com/@TheLuckyEffect77", name: <>Videos</>, disabled: false },
 	{ subdir: "https://bnds.us/p601dx", name: <>Shows</>, disabled: false },
-	{ subdir: "/", name: <Logo />},
 	{ subdir: "https://www.store.theluckyeffect.com/", name: <>Store</>, disabled: true },
 	{ subdir: "/about", name: <>About</>, disabled: false },
-	{ subdir: "/contact", name: <>Contact</>, disabled: false },
 ]
 
  function Logo() {
@@ -36,7 +35,11 @@ export default function Header() {
 
 	return (
 		<header className={`z-1 absolute top-0 w-full ${isHome ? 'text-neutral-100' : ''}`}>
-			<nav className="w-full flex items-center justify-center font-bold gap-2 text-xs p-4 sm:gap-12 md:text-base">
+			<nav className="w-full flex items-center justify-between py-4 px-2 sm:px-100">
+				<Link href={"/"}>
+					<Logo />
+				</Link>
+				<div className="flex gap-2 sm:gap-12 font-bold text-xs md:text-base">
 				{nav_links.map((item, index) =>
 					item.disabled ? (
 						<div key={index} className="pointer-events-none opacity-50">
@@ -48,6 +51,8 @@ export default function Header() {
 						</Link>
 					)
 				)}
+				</div>
+				<Socials />
 			</nav>
 		</header>
 	)
