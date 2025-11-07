@@ -4,13 +4,13 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 
 const nav_links = [
-	{ subdir: "/preview/music", name: <>Music</>, disabled: false },
+	{ subdir: "/music", name: <>Music</>, disabled: false },
 	{ subdir: "https://www.youtube.com/@TheLuckyEffect77", name: <>Videos</>, disabled: false },
 	{ subdir: "https://bnds.us/p601dx", name: <>Shows</>, disabled: false },
-	{ subdir: "/preview", name: <Logo />},
+	{ subdir: "/", name: <Logo />},
 	{ subdir: "https://www.store.theluckyeffect.com/", name: <>Store</>, disabled: true },
-	{ subdir: "/preview/about", name: <>About</>, disabled: false },
-	{ subdir: "/preview/contact", name: <>Contact</>, disabled: false },
+	{ subdir: "/about", name: <>About</>, disabled: false },
+	{ subdir: "/contact", name: <>Contact</>, disabled: false },
 ]
 
  function Logo() {
