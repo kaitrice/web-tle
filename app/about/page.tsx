@@ -1,26 +1,7 @@
-import Image from "next/image"
-import { press } from "../_data/press_testdata";
-import { band } from "../_data/band_testdata";
-
-function Card({ img, alt, children }: { img: string; alt: string; flag?: boolean; children?: React.ReactNode; }) {
-	return (
-		<div className="w-full max-w-sm flex flex-col items-center">
-			<div className="relative w-full overflow-hidden shadow-lg group">
-				<div className="w-full h-64 overflow-hidden">
-					<Image
-						src={img}
-						alt={alt}
-						width={1000}
-						height={1000}
-						className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-					/>
-				</div>
-			</div>
-
-			<div className="mt-4 w-full text-center">{children}</div>
-		</div>
-	)
-}
+import { press } from "../_data/press_testdata"
+import { band } from "../_data/band_testdata"
+import { Card } from "../_components/Card"
+import { Button } from "../_components/Button"
 
 function News() {
   return (
@@ -32,11 +13,7 @@ function News() {
             <div className="flex flex-col gap-1 px-8">
               <h2 className="font-bold text-xl">{item.title}</h2>
               <p className="text-gray-400 uppercase tracking-widest text-sm">{item.date}</p>
-              <a href={item.url} target="blank">
-                <button className="p-2 border-2 border-orange-500">
-                  Read More
-                </button>
-              </a>
+              <Button url={item.url} cta="Read More" />
             </div>
           </Card>
         ))}

@@ -15,6 +15,10 @@
       padding-top: 6em;
     }
   }
+
+  .hero-spacer {
+    padding-top: 100vh;
+  }
 }
 
 @font-face {
@@ -43,7 +47,6 @@ h1 {
 
 .hero-bg {
     background-image: url('/img/hero/hero_photoshoot_vertical.jpg');
-    
     background-size: cover;
     background-position: center;
     height: 100vh;
