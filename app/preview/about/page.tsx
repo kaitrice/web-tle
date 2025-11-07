@@ -1,5 +1,5 @@
-import { Card } from "@/app/_components/common/Card"
-import { Hero } from "@/app/_components/common/Hero"
+import { Card } from "@/app/_components/Card"
+import { Hero } from "@/app/_components/Hero"
 
 function Gallery() {
   return (

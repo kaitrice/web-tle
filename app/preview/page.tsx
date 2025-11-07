@@ -1,10 +1,7 @@
-import Button from "../_components/common/Button"
-import { Card } from "../_components/common/Card"
-import { HeroVideo } from "../_components/common/Hero"
-import Testimonials from "../_components/common/Testimonials"
-import { TourWidget } from "../_components/widgets/BandsintownWidget"
-import SpotifyWidget from "../_components/widgets/SpotifyWidget"
-import { YoutubeWidget } from "../_components/widgets/YoutubeWidget"
+import Button from "../_components/Button"
+import { Card } from "../_components/Card"
+import { HeroVideo } from "../_components/Hero"
+import Testimonials from "../_components/Testimonials"
 
 function News() {
 	return (
@@ -33,7 +30,6 @@ function Music() {
 		<section className="p-2 md:p-6">
 			<h1 className="underline underline-offset-6 uppercase tracking-widest text-xl font-bold">Top Track</h1>
 			{/* Spotify singles widget */}
-			<SpotifyWidget max={1} />
 			<Button label="View All" end="/preview/music" />
 		</section>
 	)
@@ -44,7 +40,6 @@ function Tour() {
 		<section className="py-10 px-6 md:px-50">
 			<h1 className="underline underline-offset-6 uppercase tracking-widest text-xl font-bold">Live Dates</h1>
 			{/* BandsInTown widget */}
-			<TourWidget max="3" />
 		</section>
 	)
 }
@@ -64,7 +59,6 @@ function Video() {
 		<section className="p-2 md:p-6">
 			<h1 className="underline underline-offset-6 uppercase tracking-widest text-xl font-bold">Performance Recaps</h1>
 			{/* Youtube widget small */}
-			<YoutubeWidget />
 			<Button label="Watch More" end="https://www.youtube.com/@TheLuckyEffect77" />
 		</section>
 	)

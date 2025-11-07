@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Socials from "./Socials"
-import { SubscribeWidget } from "../widgets/BandsintownWidget"
 
 function Copyright() {
   return (
@@ -21,7 +20,6 @@ function Copyright() {
 export default function Footer() {
   return (
     <footer className="flex flex-col gap-4 justify-center items-center py-3">
-      <SubscribeWidget />
       <Socials />
       <Copyright />
     </footer>
