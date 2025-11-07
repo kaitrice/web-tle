@@ -2,21 +2,25 @@ export const band = [
     {
         name: "Moses Navarro",
         role: ["Singer/Songwriter", "Guitarist"],
-        img: "/img/band/moses.webp"
+        img: "/img/band/moses.webp",
+        social: "https://www.instagram.com/theluckyeffectt/"
     },
     {
         name: "Ian East",
         role: ["Singer/Songwriter", "Guitarist"],
-        img: "/img/band/ian.webp"
+        img: "/img/band/ian.webp",
+        social: "https://www.instagram.com/ianmeast/"
     },
     {
         name: "Patrick East",
         role: ["Bassist"],
-        img: "/img/band/patrick.webp"
+        img: "/img/band/patrick.webp",
+        social: "https://www.instagram.com/patrick_east/"
     },
     {
-        name: "Kai",
+        name: "Kai Miyasato",
         role: ["Drummer"],
-        img: "/img/band/kai.webp"
+        img: "/img/band/kai.webp",
+        social: "https://www.instagram.com/ka.iawe/"
     },
 ]
