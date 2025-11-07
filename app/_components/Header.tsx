@@ -1,21 +1,20 @@
 'use client'
-import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
 import Socials from "./Socials"
 
 const nav_links = [
-	{ subdir: "/music", name: <>Music</>, disabled: false },
-	{ subdir: "https://www.youtube.com/@TheLuckyEffect77", name: <>Videos</>, disabled: false },
-	{ subdir: "https://bnds.us/p601dx", name: <>Shows</>, disabled: false },
-	// { subdir: "https://www.store.theluckyeffect.com/", name: <>Store</>, disabled: true },
-	{ subdir: "/about", name: <>About</>, disabled: false },
+	{ name: "Music", subdir: "/#music" },
+	{ name: "Videos", subdir: "https://www.youtube.com/@TheLuckyEffect77", blank: true },
+	{ name: "Tour", subdir: "/#tour" },
+	{ name: "Store", subdir: "https://store.theluckyeffect.com/", blank: true },
+	{ name: "About", subdir: "/about" },
 ]
 
- function Logo() {
+function Logo() {
 	return (
-		<>
-			<div className="w-18 sm:w-18 md:w-24 lg:w-32">
+		<div className="w-18 sm:w-18 md:w-24 lg:w-32">
 			<Image
 				aria-hidden
 				src="/img/theluckyeffect_logo_transparent.png"
@@ -24,8 +23,19 @@ const nav_links = [
 				height={100}
 				style={{ width: '100%', height: 'auto' }}
 			/>
-			</div>
-		</>
+		</div>
+	)
+}
+
+function Navigation() {
+	return (
+		<div className="flex gap-2 sm:gap-12 font-bold text-sm md:text-base">
+			{nav_links.map((item, index) =>
+				<a key={index} href={item.subdir} className="hover:underline hover:underline-offset-6" target={item.blank ? "_blank" : undefined}>
+					{item.name}
+				</a>
+			)}
+		</div>
 	)
 }
 
@@ -34,28 +44,13 @@ export default function Header() {
 	const isHome = pathname === '/' || pathname === '/preview'
 
 	return (
-		<header className={`z-1 absolute top-0 w-full ${isHome ? 'text-neutral-100' : ''}`}>
-			<nav className="w-full flex items-center justify-between py-4 px-6 lg:px-12 xl:px-100">
-				<Link href={"/"}>
+		<header className={`absolute top-0 z-1 w-full ${isHome ? 'text-neutral-100' : ''}`}>
+			<nav className="w-full flex flex-col gap-2 md:flex-row md:gap-0 items-center justify-between py-4 px-6 lg:px-12 xl:px-100">
+				<a href="/">
 					<Logo />
-				</Link>
-				<div className="flex gap-2 sm:gap-12 font-bold text-xs md:text-base">
-				{nav_links.map((item, index) =>
-					item.disabled ? (
-						<div key={index} className="pointer-events-none opacity-50">
-							{item.name}
-						</div>
-					) : (
-						<Link key={index} href={item.subdir} className="hover:underline hover:underline-offset-6">
-							{item.name}
-						</Link>
-					)
-				)}
-				</div>
-				
-				<span className="hidden md:flex">
-					<Socials flag={isHome} />
-				</span>
+				</a>
+				<Navigation />
+				<Socials flag={isHome} />
 			</nav>
 		</header>
 	)

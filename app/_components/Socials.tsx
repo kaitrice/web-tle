@@ -26,7 +26,7 @@ function SocialUI({ data, flag }: SocialUIProps) {
   }
 
   return (
-    <Link href={url} className="hover:text-orange-500">
+    <a target="_blank" href={url} className="hover:text-orange-500">
       <div>
         <Image
           aria-hidden
@@ -36,7 +36,7 @@ function SocialUI({ data, flag }: SocialUIProps) {
           height={24}
         />
       </div>
-    </Link>
+    </a>
   )
 }
 
