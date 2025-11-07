@@ -19,7 +19,7 @@ function AlbumCover({ img, alt }: { img: ImageType; alt: string }) {
 
 function SteamingLinks({ urls }: { urls: Streaming }) {
   return (
-    <div className="flex flex-col gap-4 sm:flex-row justify-around mt-4">
+    <div className="flex flex-col items-center gap-4 sm:flex-row mt-4">
       <a target="_blank" href={urls.apple}>
         <Image
           src="/svg/apple_full.svg"
@@ -42,7 +42,7 @@ function SteamingLinks({ urls }: { urls: Streaming }) {
 
 function Track({ data }: { data: TrackType }) {
   return (
-    <div className="w-full max-w-lg flex flex-col items-center">
+    <div className="w-xs flex flex-col items-center">
       <AlbumCover img={data.images[0]} alt={`${data.name} ${data.album_type} cover`} />
       <div className="w-full flex flex-col gap-2 text-center mt-4 px-8">
         <h2 className="font-bold text-lg sm:text-2xl">{data.name}</h2>
