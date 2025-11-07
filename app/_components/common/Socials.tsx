@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Social } from "@/app/_types/socials.type"
+import { Social } from "@/app/_util/socials.type"
 
 const socials = [
     { url: "https://www.instagram.com/theluckyeffectt/", icon: "/svg/black/instagram.svg", alt: "Instagram icon", disabled: false },

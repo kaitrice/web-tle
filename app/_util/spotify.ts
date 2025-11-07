@@ -1,4 +1,4 @@
-import { SpotifyToken, TopTracks } from "../_types/spotify.types"
+import { SpotifyToken, TopTracks } from "./spotify.types"
 
 async function fetchToken(): Promise<SpotifyToken | null> {
     const client_id = process.env.SPOTIFY_CLIENT_ID 

@@ -5,7 +5,7 @@ type Props = {
     max: string
 }
 
-export function TourWidget({ max }: Props) {
+export function TourWidget({ max }: {max: string}) {
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://widgetv3.bandsintown.com/main.min.js';
@@ -118,7 +118,14 @@ export function TourWidget({ max }: Props) {
 
 export function SubscribeWidget() {
     return (
-        <iframe src="https://bandsintown.com/artist/15591806/email_signup_form?headerTextColor=rgba(255,247,237,1)&backgroundColor=rgba(208,135,0,1)&ctaBackgroundColor=rgba(209,213,220,1)&title=MAILING LIST&headerTextStyle=normal&headerText=Sign up to get the latest updates&font=&ctaIcon=hide&ctaBorderRadius=4px&ctaBorderWidth=2px&ctaBorderColor=rgba(255,247,237,1)&ctaFontColor=rgba(74,74,74,1)&alignment=center&emailInputField=show&ctaLabel=Subscribe&layout=wide&locale=en&ctaSize=small" width="100%" height="220px" title="newsletter-widget"></iframe>
+        <section className="flex flex-col items-center text-center w-full bg-orange-200 pt-24">
+            <h2 className="uppercase tracking-widest text-2xl font-bold">Subscribe to our newsletter</h2>
+            <p>Stay up to date with all the latest concerts and events.</p>
+            <iframe src="https://bandsintown.com/artist/15591806/email_signup_form?headerTextColor=rgba(30,41,59,1)&backgroundColor=rgba(155,156,122,0)&ctaBackgroundColor=rgba(0,180,179,1)&title=&headerTextStyle=normal&headerText=&font=Cabin&ctaIcon=hide&ctaBorderRadius=0px&ctaBorderWidth=2px&ctaBorderColor=rgba(0,180,179,1)&ctaFontColor=rgba(255,255,255,1)&alignment=center&emailInputField=show&ctaLabel=Subscribe&layout=wide&locale=en&ctaSize=small" width="100%" height="220px" title="newsletter-widget"></iframe>
+        </section>
+        
+    
+    
     )
 }
 

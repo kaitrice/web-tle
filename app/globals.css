@@ -5,25 +5,7 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 @layer utilities {
-  .bg-home {
-    background-image: url("/img/lucky-hero.jpg");
-  }
-
   .heading-spacer {
     padding-top: 6em;
   }
@@ -35,3 +17,26 @@
   }
 }
 
+@font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 200,500,800;
+    font-display: swap;
+    src: url('/font/Cabin-VariableFont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/font/rans____.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+h1 {
+    font-family: 'Rans', sans-serif;
+}

@@ -4,27 +4,27 @@ import { Hero } from "@/app/_components/common/Hero"
 function Gallery() {
   return (
     <div id="band" className="flex flex-col sm:flex-row w-full justify-center">
-        <Card url="/preview/about#band" img="/img/moses.webp" alt="Moses Navarro" flag>
+        <Card url="/preview/about#band" img="/img/band/moses.webp" alt="Moses Navarro" flag>
           <div>
             <p className="text-lg tracking-wide">Moses Navarro</p>
             <p className="text-gray-400 uppercase tracking-widest text-sm">Guitarist</p>
             <p className="text-gray-400 uppercase tracking-widest text-sm">Co Lead Singer/Songwriter</p>
           </div>
         </Card>
-        <Card url="/preview/about#band" img="/img/ian.webp" alt="Ian East" flag>
+        <Card url="/preview/about#band" img="/img/band/ian.webp" alt="Ian East" flag>
           <div>
             <p className="text-lg tracking-wide">Ian East</p>
             <p className="text-gray-400 uppercase tracking-widest text-sm">Guitarist</p>
             <p className="text-gray-400 uppercase tracking-widest text-sm">Co Lead Singer/Songwriter</p>
           </div>
         </Card>
-        <Card url="/preview/about#band" img="/img/patrick.webp" alt="Patrick East" flag>
+        <Card url="/preview/about#band" img="/img/band/patrick.webp" alt="Patrick East" flag>
           <div>
             <p className="text-lg tracking-wide">Patrick East</p>
             <p className="text-gray-400 uppercase tracking-widest text-sm">Bassist</p>
           </div>
         </Card>
-        <Card url="/preview/about#band" img="/img/kai.webp" alt="Kai" flag>
+        <Card url="/preview/about#band" img="/img/band/kai.webp" alt="Kai" flag>
           <div>
             <p className="text-lg tracking-wide">Kai</p>
             <p className="text-gray-400 uppercase tracking-widest text-sm">Drummer</p>

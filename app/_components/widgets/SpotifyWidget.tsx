@@ -1,5 +1,5 @@
 import { getTracks } from "@/app/_util/spotify"
-import { Track } from "@/app/_types/spotify.types"
+import { Track } from "@/app/_util/spotify.types"
 import React from "react"
 import { songMap } from "@/app/_util/util"
 import { CardLarge } from "../common/Card"
@@ -19,9 +19,9 @@ export default async function SpotifyWidget({ max }: { max?: number }) {
 
 					return (
 						<CardLarge key={track.id} url={link} img={cover} alt={`${title} cover image`} flag >
-							<h1 className="text-lg sm:text-2xl font-bold break-words">
+							<h2 className="text-lg sm:text-2xl font-bold break-words">
 								{track.name}
-							</h1>
+							</h2>
 						</CardLarge>
 					)
 				}) :
