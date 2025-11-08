@@ -5,10 +5,10 @@ import { Card } from "../_components/Card"
 function News() {
   return (
     <section id="news" className="pb-6">
-      <h1 className="uppercase tracking-widest text-xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">In the press</h1>
-      <div className="flex flex-col md:flex-row justify-center gap-6 p-2 md:p-6">
+      <h1 className="uppercase tracking-widest text-xl md:text-4xl font-bold pt-2 md:pt-8">In the press</h1>
+      <div className="flex flex-col md:flex-row gap-6 items-center justify-evenly p-2 md:p-6">
         {press.map((item, index) => (
-            <Card key={index} img={item.img} alt={item.alt} url={item.url}>
+          <Card key={index} img={item.img} alt={item.alt} url={item.url}>
               <div className="flex flex-col gap-1 px-8">
                 <h2 className="font-bold text-xl">{item.title}</h2>
                 <p className="text-gray-400 uppercase tracking-widest text-sm">{item.date}</p>
@@ -23,18 +23,18 @@ function News() {
 function BandGallery() {
   return (
     <section id="band" className="w-full pb-6">
-      <h1 className="uppercase tracking-widest text-2xl md:text-4xl font-bold pt-2 md:pt-8 ps-4">Meet the Band</h1>
-      <div className="flex flex-col md:flex-row justify-center gap-6 p-2 md:p-6">
+      <h1 className="uppercase tracking-widest text-2xl md:text-4xl font-bold">Meet the Band</h1>
+      <div className="flex flex-col xl:flex-wrap md:flex-row items-center justify-evenly gap-6 p-2 md:p-6">
         {band.map((item, index) => (
-          <Card key={index}  img={item.img} alt={`Photo of ${item.name}`} url={item.social}>
-            <div>
-              <p className="font-bold text-lg tracking-wide">{item.name}</p>
-              {item.role.map((role, ix) => (
-                <p key={ix} className="text-gray-400 uppercase tracking-widest text-sm">{role}</p>
-                
-              ))}
-            </div>
-          </Card>
+          <Card key={index} img={item.img} alt={`Photo of ${item.name}`} url={item.social}>
+              <div>
+                <p className="font-bold text-lg tracking-wide">{item.name}</p>
+                {item.role.map((role, ix) => (
+                  <p key={ix} className="text-gray-400 uppercase tracking-widest text-sm">{role}</p>
+
+                ))}
+              </div>
+            </Card>
         ))}
       </div>
     </section>

@@ -10,7 +10,7 @@ export const press = [
         url: "https://boldjourney.com/meet-the-lucky-effect/",
         img: "/img/news/boldjourney.webp",
         alt: "",
-        title: "Bold Journey Magazine - &quot;Meet The Lucky Effect&quot;",
+        title: "Bold Journey Magazine - 'Meet The Lucky Effect'",
         date: "April 2, 2025"
     }
 ]

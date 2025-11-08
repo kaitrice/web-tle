@@ -7,17 +7,13 @@
 
 @layer utilities {
   .heading-spacer {
-    padding-top: 4em;
+    padding-top: 8em;
   }
 
   @media (min-width: 768px) {
     .heading-spacer {
-      padding-top: 6em;
+      padding-top: 8em;
     }
-  }
-
-  .hero-spacer {
-    padding-top: 100vh;
   }
 }
 
