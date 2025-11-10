@@ -17,16 +17,15 @@
   },
   "license": "MIT",
   "author": "Kait Rice",
-  "type": "module",
-  "main": "server.js",
+  "type": "commonjs",
+  "main": "backend/server.ts",
   "scripts": {
     "test": "jest",
-    "start": "node server.js"
+    "start": "npx tsc && node dist/backend/server.js"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "ts-node": "^10.9.2"
+    "express": "^5.1.0"
   },
   "devDependencies": {
     "jest": "^29.7.0"

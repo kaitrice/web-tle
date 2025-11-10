@@ -1,5 +1,5 @@
 import dotenv from "dotenv"
-import { normalize_data } from "./normalize.ts"
+import { normalize_data } from "./normalize"
 
 dotenv.config()
 

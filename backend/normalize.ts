@@ -1,6 +1,6 @@
-import type { Artist, Album, Track } from "../types/index.ts"
-import { fetch_apple_music } from "./music/apple.ts";
-import { fetch_album_tracks, fetch_spotify_albums } from "./music/spotify.ts";
+import type { Artist, Album, Track } from "../types/index"
+import { fetch_apple_music } from "./music/apple";
+import { fetch_album_tracks, fetch_spotify_albums } from "./music/spotify";
 
 async function get_album_tracks({ id }: { id: string }) {
     const tracks = await fetch_album_tracks({ album_id: id })
