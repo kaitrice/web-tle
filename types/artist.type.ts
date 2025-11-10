@@ -1,9 +1,7 @@
-import { Album } from "./album.type"
-import { Streaming } from "./streaming.type"
+import type { Album, Streaming } from "./index.ts"
 
 export type Artist = {
     name: string
-    ids: Streaming
     links: Streaming
     genres: string[]
     discography: {
