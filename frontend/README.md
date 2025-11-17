@@ -55,7 +55,7 @@ Band website built with Next.js, designed to showcase The Lucky Effect’s music
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`SPOTIFY_CLIENT_ID`
+`SPOTIFY_CLIENT`
 
 `SPOTIFY_CLIENT_SECRET`
 

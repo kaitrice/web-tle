@@ -1,0 +1,20 @@
+{
+  "name": "web-tle",
+  "version": "1.0.0",
+  "description": "Website architecture for The Lucky Effect website.",
+  "homepage": "https://github.com/kaitrice/web-tle#readme",
+  "bugs": {
+    "url": "https://github.com/kaitrice/web-tle/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaitrice/web-tle.git"
+  },
+  "license": "MIT",
+  "author": "Kaitlyn Rice",
+  "type": "module",
+  "main": "types/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
