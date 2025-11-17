@@ -5,7 +5,6 @@ export type Album = {
     name: string
     cover_images: string
     total_tracks: number
-    urls: Streaming
     tracks: Track[]
     released: Date
     links: Streaming
