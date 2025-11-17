@@ -49,7 +49,7 @@ export async function fetch_spotify_albums() {
     }
 }
 
-export async function fetch_album_tracks({album_id}: {album_id: string}) {
+export async function fetch_spotify_tracks({album_id}: {album_id: string}) {
     try {
         var url = `https://api.spotify.com/v1/albums/${album_id}/tracks`;
 
