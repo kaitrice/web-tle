@@ -1,7 +1,7 @@
 async function get_access_token() {
     try {
-        var client_id = process.env.SPOTIFY_CLIENT_ID;
-        var client_secret = process.env.SPOTIFY_SECRET;
+        var client_id = process.env.SPOTIFY_CLIENT;
+        var client_secret = process.env.SPOTFY_SECRET;
 
         const response = await fetch("https://accounts.spotify.com/api/token", {
             method: "POST",
