@@ -27,7 +27,7 @@ async function get_access_token() {
 
 export async function fetch_spotify_albums() {
     try {
-        var id = process.env.SPOTIFY_ARTIST_ID;
+        var id = "5Tr5sJICcc4lN5ppznL5fR";
         var url = `https://api.spotify.com/v1/artists/${id}/albums`;
 
         let data = await get_access_token();

@@ -1,6 +1,6 @@
 export async function fetch_apple_music({ entity }: { entity: string }) {
     try {
-        var id = process.env.APPLE_ARTIST_ID;
+        var id = "1790610682";
         const url = `https://itunes.apple.com/lookup?id=${id}&entity=${entity}`;
 
         const response = await fetch(url);

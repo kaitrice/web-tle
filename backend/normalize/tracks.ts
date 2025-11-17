@@ -1,4 +1,4 @@
-import { Streaming, Track } from "../../types";
+import { Streaming, Track } from "../types";
 import { fetch_apple_music } from "../music/apple";
 import { fetch_spotify_tracks } from "../music/spotify";
 

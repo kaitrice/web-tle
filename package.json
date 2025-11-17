@@ -1,7 +1,7 @@
 {
   "name": "web-tle",
   "version": "1.0.0",
-  "description": "Website architechure for The Lucky Effect website.",
+  "description": "Website architecture for The Lucky Effect website.",
   "homepage": "https://github.com/kaitrice/web-tle#readme",
   "bugs": {
     "url": "https://github.com/kaitrice/web-tle/issues"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/kaitrice/web-tle.git"
   },
   "license": "MIT",
-  "author": "Kait Rice",
+  "author": "Kaitlyn Rice",
   "type": "module",
   "main": "types/index.js",
   "scripts": {

@@ -1,33 +1,23 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "The Lucky Effect API, retrieving their content across platforms, normalizing data, and returning it to client",
-  "keywords": [
-    "Nodejs",
-    "api",
-    "The Lucky Effect"
-  ],
-  "homepage": "https://github.com/kaitrice/web-tle#readme",
-  "bugs": {
-    "url": "https://github.com/kaitrice/web-tle/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kaitrice/web-tle.git"
-  },
-  "license": "MIT",
-  "author": "Kait Rice",
-  "type": "commonjs",
-  "main": "backend/server.ts",
+  "description": "",
   "scripts": {
-    "test": "jest",
-    "start": "npx tsc && node dist/backend/server.js"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "@azure/functions": "^4.0.0"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
-  }
+    "@types/node": "^20.x",
+    "dotenv": "^17.2.3",
+    "rimraf": "^5.0.0",
+    "typescript": "^4.0.0"
+  },
+  "main": "dist/src/{index.js,functions/*.js}"
 }

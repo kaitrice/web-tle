@@ -1,4 +1,4 @@
-import { Album } from "../../types";
+import { Album } from "../types";
 import { fetch_apple_music } from "../music/apple";
 import { get_album_tracks } from "./tracks";
 

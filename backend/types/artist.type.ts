@@ -1,4 +1,4 @@
-import type { Album, Streaming } from "./index.ts"
+import type { Album, Streaming } from "./index"
 
 export type Artist = {
     name: string

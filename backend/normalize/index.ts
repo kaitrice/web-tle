@@ -1,4 +1,4 @@
-import type { Artist } from "../../types/index"
+import type { Artist } from "../types/index"
 import { fetch_apple_music } from "../music/apple";
 import { fetch_spotify_albums } from "../music/spotify";
 import { get_albums } from "./albums";
