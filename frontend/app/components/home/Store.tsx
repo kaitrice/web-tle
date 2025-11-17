@@ -1,8 +1,8 @@
-import { merch } from "../_data/products_testdata"
-import { Merch as MerchType } from "../_util/merch.type"
+import { products } from "../data/products"
+import { Product as ProductType } from "../types/product.type"
 import { Card } from "./Card"
 
-function Merch({ data }: { data: MerchType }) {
+function Product({ data }: { data: ProductType }) {
   return (
     <div className="w-xs h:xs md:h-lg p-4">
       <Card img={data.img} alt={`Photo of ${data.color} ${data.type}`} url={data.url}>
@@ -18,8 +18,8 @@ export default function Store() {
     <section id="store">
       <h1 className="uppercase tracking-widest text-2xl md:text-4xl font-bold">Merch</h1>
       <div className="flex flex-col xl:flex-row gap-12 justify-evenly items-center pt-2 md:pt-8 pb-12">
-        {merch.map((item, index) => (
-          <Merch key={index} data={item} />
+        {products.map((item, index) => (
+          <Product key={index} data={item} />
         ))}
       </div>
     </section>

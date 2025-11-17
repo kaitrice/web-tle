@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "The Lucky Effect",

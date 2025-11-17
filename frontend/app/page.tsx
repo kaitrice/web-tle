@@ -1,7 +1,7 @@
-import { Hero } from "./_components/Hero"
-import Music from "./_components/Music"
-import Store from "./_components/Store"
-import Tour from "./_components/Tour"
+import { Hero } from "./components/home/Hero"
+import Music from "./components/home/Music"
+import Store from "./components/home/Store"
+import Tour from "./components/home/Tour"
 
 export default function Home() {
 	return (

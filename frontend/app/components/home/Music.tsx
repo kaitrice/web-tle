@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { music } from "../_data/music_testdata";
+import { music } from "../data/music_testdata";
 import { Track as TrackType } from "../_util/music.type";
 import { Image as ImageType, Streaming } from "../_util/common.type";
+import { fetch_data } from "@/app/data/util";
 
 function AlbumCover({ img, alt }: { img: ImageType; alt: string }) {
   return (
@@ -53,7 +54,9 @@ function Track({ data }: { data: TrackType }) {
   )
 }
 
-export default function Music() {
+export default async function Music() {
+  const music = await fetch_data()
+  
   return (
     <section id="music">
       <h1 className="uppercase tracking-widest text-2xl md:text-4xl font-bold">Our Releases</h1>
