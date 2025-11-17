@@ -4,7 +4,8 @@ import { normalize_data } from "./normalize"
 dotenv.config()
 
 async function main() {
-    normalize_data()
+    const data = await normalize_data()
+    console.log(JSON.stringify(data, null, 2))
 }
 
 main()
