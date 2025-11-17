@@ -1,4 +1,4 @@
-export const merch = [
+export const products = [
     {
         type: "unisex band t-shirt",
         color: "black",
