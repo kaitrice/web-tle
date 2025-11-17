@@ -3,8 +3,3 @@ export type Image = {
     height: number;
     width: number;
 }
-
-export type Streaming = {
-    spotify: string
-    apple: string
-}

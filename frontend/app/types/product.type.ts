@@ -1,4 +1,4 @@
-export type Merch = {
+export type Product = {
     type: string
     color: string
     price: number
