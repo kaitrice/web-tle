@@ -3,7 +3,7 @@ import type { Streaming, Track } from "./index"
 export type Album = {
     type: string
     name: string
-    cover_images: string
+    cover_image: string
     total_tracks: number
     tracks: Track[]
     released: Date

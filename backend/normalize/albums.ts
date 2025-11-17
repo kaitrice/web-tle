@@ -23,7 +23,7 @@ export async function get_albums({ data }: { data: any }) {
         const album: Album = {
             type: item.album_type,
             name: item.name,
-            cover_images: item.images[0].url,
+            cover_image: item.images[0].url,
             total_tracks: item.total_tracks,
             tracks: album_tracks,
             released: item.release_date,
