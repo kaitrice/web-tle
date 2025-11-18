@@ -18,7 +18,7 @@ export function TourWidget() {
             data-events-to-display=""
             data-background-color="rgba(255,237,212,0)"
             data-separator-color="rgba(209,213,220,1)"
-            data-text-color="rgba(29,41,61,1)"
+            data-text-color="rgba(30,41,59,1)"
             data-font="Cabin"
             data-auto-style="true"
 
@@ -26,19 +26,17 @@ export function TourWidget() {
             data-header-capitalization="uppercase"
             data-location-capitalization="capitalize"
             data-venue-capitalization="capitalize"
-            data-display-local-dates="false"
-            data-local-dates-position="tab"
-            data-display-past-dates="false"
+            data-local-dates-position="aboveUpcoming"
             data-display-details="false"
             data-display-lineup="false"
             data-display-start-time="false"
             data-social-share-icon="false"
             data-display-limit="all"
 
-            data-date-format="MMM. D, YYYY"
-            data-date-orientation="horizontal"
-            data-date-border-color="rgba(29,41,61,1)"
-            data-date-border-width="1px"
+            data-date-format="MMM. DD YYYY"
+            data-date-orientation="vertical"
+            data-date-border-color="rgba(30,41,59,1)"
+            data-date-border-width="2px"
             data-date-capitalization="capitalize"
             data-date-border-radius="0px"
 
@@ -59,13 +57,13 @@ export function TourWidget() {
 
             data-event-rsvp-position="hidden"
             data-event-rsvp-cta-size="medium"
-            data-event-rsvp-only-show-icon="true"
+            data-event-rsvp-only-show-icon="false"
             data-event-rsvp-text="RSVP"
             data-event-rsvp-icon="false"
-            data-event-rsvp-cta-text-color="rgba(74,74,74,1)"
-            data-event-rsvp-cta-bg-color="rgba(255,255,255,1)"
-            data-event-rsvp-cta-border-color="rgba(74,74,74,1)"
-            data-event-rsvp-cta-border-width="1px"
+            data-event-rsvp-cta-text-color="rgba(30,41,59,1)"
+            data-event-rsvp-cta-bg-color="rgba(255,255,255,0)"
+            data-event-rsvp-cta-border-color="rgba(249,115,22,1)"
+            data-event-rsvp-cta-border-width="2px"
             data-event-rsvp-cta-border-radius="2px"
 
             data-follow-section-position="hidden"
@@ -82,9 +80,9 @@ export function TourWidget() {
 
             data-play-my-city-position="bottom"
             data-play-my-city-alignment="center"
-            data-play-my-city-header-text="Don't see a show near you?"
+            data-play-my-city-header-text=""
             data-play-my-city-cta-size="medium"
-            data-play-my-city-cta-text="REQUEST A SHOW"
+            data-play-my-city-cta-text="PLAY MY CITY"
             data-play-my-city-cta-icon="false"
             data-play-my-city-cta-text-color="rgba(30,41,59,1)"
             data-play-my-city-cta-bg-color="rgba(74,74,74,0)"
@@ -103,11 +101,12 @@ export function TourWidget() {
 
             data-language="en"
             data-layout-breakpoint="900"
-            data-app-id=""
+            data-app-id="c1b68694c2bdf63ae100c1a682f6e439"
             data-affil-code=""
             data-bit-logo-position="hidden"
-            data-bit-logo-color="rgba(29,41,61,1)"
+            data-bit-logo-color="rgba(30,41,59,1)"
 
+            data-display-past-dates="true"
         ></a>
     )
 }

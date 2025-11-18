@@ -3,7 +3,7 @@ import { News } from "../components/about/News";
 
 export default function About() {
   return (
-    <main className="min-h-screen px-6 xl:px-100">
+    <main className="text-center mt-2">
       <div className="heading-spacer" />
       <BandGallery />
       <News />
