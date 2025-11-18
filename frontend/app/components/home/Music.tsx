@@ -1,14 +1,12 @@
 import Image from "next/image";
-import { music } from "../data/music_testdata";
-import { Track as TrackType } from "../_util/music.type";
-import { Image as ImageType, Streaming } from "../_util/common.type";
-import { fetch_data } from "@/app/data/util";
+import { Streaming, Album as AlbumType, Artist } from "@/app/types";
+import { getData } from "@/app/lib/getData";
 
-function AlbumCover({ img, alt }: { img: ImageType; alt: string }) {
+function AlbumCover({ img, alt }: { img: string; alt: string }) {
   return (
     <div className="relative w-full overflow-hidden shadow-lg group">
       <Image
-        src={img.url}
+        src={img}
         alt={alt}
         width={1000}
         height={1000}
@@ -41,30 +39,68 @@ function SteamingLinks({ urls }: { urls: Streaming }) {
   )
 }
 
-function Track({ data }: { data: TrackType }) {
+function Album({ data }: { data: AlbumType }) {
   return (
     <div className="w-xs flex flex-col items-center">
-      <AlbumCover img={data.images[0]} alt={`${data.name} ${data.album_type} cover`} />
+      <AlbumCover img={data.cover_image} alt={`${data.name} ${data.type} cover`} />
       <div className="w-full flex flex-col gap-2 text-center mt-4 px-8">
         <h2 className="font-bold text-lg sm:text-2xl">{data.name}</h2>
-        <p className="text-gray-400 uppercase tracking-widest text-xs">{data.album_type}</p>
-        <SteamingLinks urls={data.external_urls} />
+        <p className="text-gray-400 uppercase tracking-widest text-xs">{data.type}</p>
+        <SteamingLinks urls={data.links} />
       </div>
     </div>
   )
 }
 
 export default async function Music() {
-  const music = await fetch_data()
-  
-  return (
+  const artistData = await getData()
+
+  if (!artistData) return (
     <section id="music">
       <h1 className="uppercase tracking-widest text-2xl md:text-4xl font-bold">Our Releases</h1>
-      <div className="flex flex-col xl:flex-row gap-12 justify-evenly items-center pt-2 md:pt-8 pb-12">
-        {music.map((item, index) => (
-          <Track key={index} data={item} />
-        ))}
+      <div className="flex flex-col gap-2 items-center justify-center ps-6 py-12">
+        <p className="font-bold text-xl">Oops!</p>
+        <p>We has an issue retrieving our newest releases. We're sorry for the inconvenience.</p>
+        <p>Please try reloading your browser. If problem persists, please try again later.</p>
       </div>
+    </section>
+  )
+
+  const { discography } = artistData
+
+  return (
+    <section id="music" className="mt-12 px-6 xl:px-100">
+      <h1 className="uppercase tracking-widest text-2xl md:text-4xl font-bold">Our Releases</h1>
+      {discography.singles.length > 0 &&
+        <div id="discography-singes">
+          <h2 className="font-bold text-xl my-2">Singles & EPs</h2>
+          <div className="flex flex-col xl:flex-row gap-12 justify-evenly items-center pt-2 md:pt-8 pb-12">
+            {discography.singles.map((item, index) => (
+              <Album key={index} data={item} />
+            ))}
+          </div>
+        </div>
+      }
+      {discography.albums.length > 0 &&
+        <div id="discography-singes">
+          <h2 className="font-bold text-xl mt-2">Albums</h2>
+          <div className="flex flex-col xl:flex-row gap-12 justify-evenly items-center pt-2 md:pt-8 pb-12">
+            {discography.albums.map((item, index) => (
+              <Album key={index} data={item} />
+            ))}
+          </div>
+        </div>
+      }
+      {discography.appears_on.length > 0 &&
+        <div id="discography-singes">
+          <h2 className="font-bold text-xl mt-2">Featured on</h2>
+          <div className="flex flex-col xl:flex-row gap-12 justify-evenly items-center pt-2 md:pt-8 pb-12">
+            {discography.appears_on.map((item, index) => (
+              <Album key={index} data={item} />
+            ))}
+          </div>
+        </div>
+      }
     </section>
   )
 }
