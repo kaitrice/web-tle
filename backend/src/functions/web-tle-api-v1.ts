@@ -1,6 +1,6 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { normalize_data } from "../../normalize";
-import { Artist } from "../../types";
+import { Artist } from "../types";
 
 export async function web_tle_api_v1(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     const key = request.headers.get("x-api-key")

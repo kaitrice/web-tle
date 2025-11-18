@@ -1,4 +1,4 @@
-import type { Streaming, Track } from "./index"
+import type { Streaming, Track } from "./"
 
 export type Album = {
     type: string

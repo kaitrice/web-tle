@@ -1,6 +1,6 @@
-import { Album } from "../types";
 import { fetch_apple_music } from "../music/apple";
 import { get_album_tracks } from "./tracks";
+import { Album } from "../types";
 
 export async function get_albums({ data }: { data: any }) {
     const apple = await fetch_apple_music({ entity: "album" })
