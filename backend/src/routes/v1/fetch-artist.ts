@@ -1,6 +1,6 @@
 import { HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { Artist } from "../../types";
-import normalize_data from "../../normalize";
+import normalize_data from "../../controllers/music";
 
 export async function fetchArtist(req: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     let data: Artist;

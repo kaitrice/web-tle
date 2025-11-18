@@ -1,5 +1,5 @@
-import { Streaming, Track } from "../types";
-import { fetch_spotify_tracks, fetch_apple_music } from "../music";
+import { Streaming, Track } from "../../types";
+import { fetch_spotify_tracks, fetch_apple_music } from "../../services/music";
 
 export async function get_album_tracks({ id }: { id: string }) {
     const spotify_tracks = await fetch_spotify_tracks({ album_id: id })

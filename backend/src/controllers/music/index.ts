@@ -1,5 +1,5 @@
-import { fetch_spotify_albums, fetch_apple_music } from "../music";
-import type { Artist } from "../types"
+import { fetch_spotify_albums, fetch_apple_music } from "../../services/music";
+import type { Artist } from "../../types"
 import { get_albums } from "./albums";
 import { get_genres } from "./genres";
 

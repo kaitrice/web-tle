@@ -1,5 +1,5 @@
 import { app, HttpRequest, InvocationContext } from "@azure/functions";
-import { authorize } from "../auth/authorize";
+import { authorize } from "../lib/auth/authorize";
 import { fetchArtist } from "./v1";
 
 var VERSION = 'v1'
