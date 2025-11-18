@@ -1,5 +1,5 @@
-import { fetch_apple_music } from "../music/apple";
 import { get_album_tracks } from "./tracks";
+import { fetch_apple_music } from "../music";
 import { Album } from "../types";
 
 export async function get_albums({ data }: { data: any }) {

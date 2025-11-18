@@ -1,10 +1,9 @@
-import type { Artist } from "../types/index"
-import { fetch_apple_music } from "../music/apple";
-import { fetch_spotify_albums } from "../music/spotify";
+import { fetch_spotify_albums, fetch_apple_music } from "../music";
+import type { Artist } from "../types"
 import { get_albums } from "./albums";
 import { get_genres } from "./genres";
 
-export async function normalize_data() {
+export default async function normalize_data() {
     var spotify_data = await fetch_spotify_albums()
     var spotify = spotify_data.items
 
