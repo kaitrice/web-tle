@@ -28,7 +28,7 @@ export function TourWidget() {
             data-venue-capitalization="capitalize"
             data-display-local-dates="false"
             data-local-dates-position="tab"
-            data-display-past-dates="true"
+            data-display-past-dates="false"
             data-display-details="false"
             data-display-lineup="false"
             data-display-start-time="false"
@@ -82,7 +82,7 @@ export function TourWidget() {
 
             data-play-my-city-position="bottom"
             data-play-my-city-alignment="center"
-            data-play-my-city-header-text="Don’t see a show near you?"
+            data-play-my-city-header-text="Don't see a show near you?"
             data-play-my-city-cta-size="medium"
             data-play-my-city-cta-text="REQUEST A SHOW"
             data-play-my-city-cta-icon="false"

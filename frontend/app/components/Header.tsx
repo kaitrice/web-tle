@@ -29,7 +29,7 @@ function Logo() {
 
 function Navigation() {
 	return (
-		<div className="flex gap-2 sm:gap-12 font-bold text-sm md:text-base">
+		<div className="flex gap-6 sm:gap-12 font-bold text-sm md:text-base">
 			{nav_links.map((item, index) =>
 				<a key={index} href={item.subdir} className="hover:underline hover:underline-offset-6" target={item.blank ? "_blank" : undefined}>
 					{item.name}
@@ -45,7 +45,7 @@ export default function Header() {
 
 	return (
 		<header className={`absolute top-0 z-1 w-full ${isHome ? 'text-neutral-100' : ''}`}>
-			<nav className="w-full flex flex-col gap-2 md:flex-row md:gap-0 items-center justify-between py-4 px-6 lg:px-12 xl:px-100">
+			<nav className="w-full flex flex-col gap-2 md:flex-row md:gap-0 items-center justify-between py-4 px-6 xl:px-12 2xl:px-100">
 				<Link href="/">
 					<Logo />
 				</Link>

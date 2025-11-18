@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<main>
 			<Hero />
-			<div className="pt-12 px-6 xl:px-100">
+			<div className="text-center">
 				<Store />
 				<Music />
 				<Tour />
