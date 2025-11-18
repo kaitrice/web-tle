@@ -1,3 +1,8 @@
-import { fetchArtist } from "./fetch-artist";
+import { fetchArtist } from "./artist";
 
-export { fetchArtist }
+export const routes = [
+    {
+        endpoint: "artist",
+        handler: fetchArtist
+    }
+]
