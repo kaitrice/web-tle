@@ -28,7 +28,7 @@ export async function web_tle_api_v1(request: HttpRequest, context: InvocationCo
     
     return {
         status: 200,
-        body: `${JSON.stringify(data, null, 2)}!` 
+        body: `${JSON.stringify(data, null, 2)}` 
     };
 };
 
