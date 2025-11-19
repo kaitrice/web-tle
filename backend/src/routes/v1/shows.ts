@@ -1,12 +1,9 @@
 import { HttpResponseInit, InvocationContext } from "@azure/functions";
-import { Show } from "../../types";
 import normalize_data from "../../controllers/shows";
 
 export async function fetchShows(context: InvocationContext): Promise<HttpResponseInit> {
-    let data: Show[];
-
     try {
-        data = await normalize_data();
+        const data = await normalize_data();
         return {
             status: 200,
             jsonBody: data 
