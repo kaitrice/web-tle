@@ -1,11 +1,9 @@
 import { HttpResponseInit, InvocationContext } from "@azure/functions";
-import { Articles } from "../../types";
 import normalize_data from "../../controllers/articles";
 
 export async function fetchArticles(context: InvocationContext): Promise<HttpResponseInit> {
-    let data: Articles;
     try {
-        data = await normalize_data();
+        const data = await normalize_data();
         return {
             status: 200,
             jsonBody: data
