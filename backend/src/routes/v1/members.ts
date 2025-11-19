@@ -1,7 +1,14 @@
-import { HttpResponseInit, InvocationContext } from "@azure/functions";
+import { HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import normalize_data from "../../controllers/members";
 
-export async function fetchMembers(context: InvocationContext): Promise<HttpResponseInit> {
+export async function handleMembers(req: HttpRequest, context: InvocationContext) {
+    switch(req.method) {
+        case "GET":
+            return await fetchMembers(context)
+    }
+}
+
+async function fetchMembers(context: InvocationContext): Promise<HttpResponseInit> {
     try {
         const data = await normalize_data();
         return {

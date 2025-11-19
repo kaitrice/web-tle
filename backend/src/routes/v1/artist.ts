@@ -1,8 +1,15 @@
-import { HttpResponseInit, InvocationContext } from "@azure/functions";
+import { HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
 import { Artist } from "../../types";
 import normalize_data from "../../controllers/music";
 
-export async function fetchArtist(context: InvocationContext): Promise<HttpResponseInit> {
+export async function handleArtist(req: HttpRequest, context: InvocationContext) {
+    switch(req.method) {
+        case "GET":
+            return await fetchArtist(context)
+    }
+}
+
+async function fetchArtist(context: InvocationContext): Promise<HttpResponseInit> {
     let data: Artist;
 
     try {

@@ -1,28 +1,40 @@
-import { fetchArticles } from "./articles";
-import { fetchArtist } from "./artist";
-import { fetchMembers } from "./members";
-import { fetchProducts } from "./products";
-import { fetchShows } from "./shows";
+import { handleArticles } from "./articles";
+import { handleArtist } from "./artist";
+import { handleMembers } from "./members";
+import { handleProducts } from "./products";
+import { handleShows } from "./shows";
+
+enum Methods {
+    GET = "GET",
+    POST = "POST",
+    PUT = "PUT",
+    DELETE = "DELETE",
+}
 
 export const routes = [
     {
         endpoint: "artist",
-        handler: fetchArtist
+        methods: [ Methods.GET ],
+        handler: handleArtist
     },
     {
         endpoint: "shows",
-        handler: fetchShows
+        methods: [ Methods.GET ],
+        handler: handleShows
     },
     {
         endpoint: "articles",
-        handler: fetchArticles
+        methods: [ Methods.GET ],
+        handler: handleArticles
     },
     {
         endpoint: "members",
-        handler: fetchMembers
+        methods: [ Methods.GET ],
+        handler: handleMembers
     },
     {
         endpoint: "products",
-        handler: fetchProducts
+        methods: [ Methods.GET ],
+        handler: handleProducts
     }
 ]
