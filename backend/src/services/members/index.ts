@@ -1,5 +1,5 @@
-import memberData from '../../data/members.json'
+import members from '../../data/members.json'
 
 export function fetch_members() {
-    return memberData.data
+    return members.data
 }
