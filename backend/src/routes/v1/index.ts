@@ -1,3 +1,4 @@
+import { fetchArticles } from "./articles";
 import { fetchArtist } from "./artist";
 import { fetchShows } from "./shows";
 
@@ -9,5 +10,9 @@ export const routes = [
     {
         endpoint: "shows",
         handler: fetchShows
+    },
+    {
+        endpoint: "articles",
+        handler: fetchArticles
     }
 ]
