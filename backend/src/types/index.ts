@@ -5,6 +5,6 @@ import type { Track } from "./track.type";
 import type { Show } from "./show.type";
 import type { Article } from "./article.type";
 import type { Member } from "./member.type";
-import type { Products } from "./products.type";
+import type { Product } from "./product.type";
 
-export type { Album, Artist, Streaming, Track, Show, Article, Member, Products }
+export type { Album, Artist, Streaming, Track, Show, Article, Member, Product }
