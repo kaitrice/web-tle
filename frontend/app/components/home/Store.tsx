@@ -1,4 +1,4 @@
-import { products } from "@/app/data/products"
+import { fetchData } from "@/app/lib/fetchData"
 import { Card } from "../Card"
 import { Product as ProductType } from "@/app/types"
 
@@ -29,7 +29,9 @@ function Product({ data }: { data: ProductType }) {
   )
 }
 
-export default function Store() {
+export default async function Store() {
+  const products: ProductType[] = await fetchData("products")
+
   return (
     <section id="store" className="pt-12 px-6 xl:px-60">
       <h1 className="uppercase tracking-widest text-4xl font-bold">Merch</h1>
