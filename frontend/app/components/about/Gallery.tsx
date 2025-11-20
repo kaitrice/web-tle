@@ -1,6 +1,6 @@
-import { fetchData } from "@/app/lib/fetchData";
+import { fetchData } from "@lib";
+import { Member } from "@types";
 import { Card } from "../Card";
-import { Member } from "@/types";
 
 export async function BandGallery() {
   const members: Member[] = await fetchData("members")

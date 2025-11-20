@@ -1,5 +1,5 @@
+import { SocialMedia } from "@types";
 import Image from "next/image"
-import { SocialUIProps } from "@/app/types/socialmedia.type"
 
 const socials = [
   { url: "https://www.instagram.com/theluckyeffectt/", icon: "/svg/black/instagram.svg", alt: "Instagram icon", disabled: false },
@@ -9,7 +9,7 @@ const socials = [
   { url: "https://open.spotify.com/artist/5Tr5sJICcc4lN5ppznL5fR", icon: "/svg/black/spotify.svg", alt: "Spotify icon", disabled: false },
 ]
 
-function SocialUI({ data, flag }: SocialUIProps) {
+function SocialUI({ data, flag }: {data: SocialMedia, flag: boolean;}) {
   const { url, alt } = data
   let { icon } = data
 

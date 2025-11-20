@@ -1,5 +1,5 @@
-import { BandGallery } from "../components/about/Gallery";
-import { News } from "../components/about/News";
+import { BandGallery } from "@about/Gallery";
+import { News } from "@about/News";
 
 export default function About() {
   return (

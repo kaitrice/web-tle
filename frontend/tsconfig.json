@@ -18,8 +18,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./app",
     "paths": {
-      "@/*": ["./*"]
+      "@lib": ["lib/fetchData.ts"],
+      "@components/*": ["components/*.tsx"],
+      "@about/*": ["components/about/*.tsx"],
+      "@home/*": ["components/home/*.tsx"],
+      "@types": ["types/index.tsx"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Streaming, Album as AlbumType, Artist } from "@/app/types";
-import { fetchData } from "@/app/lib/fetchData";
+import { Streaming, Album as AlbumType, Artist } from "@types";
+import { fetchData } from "@lib";
 
 function AlbumCover({ img, alt }: { img: string; alt: string }) {
   return (

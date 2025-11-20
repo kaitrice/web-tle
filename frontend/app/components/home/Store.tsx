@@ -1,6 +1,6 @@
-import { fetchData } from "@/app/lib/fetchData"
+import { fetchData } from "@lib"
+import { Product as ProductType } from "@types"
 import { Card } from "../Card"
-import { Product as ProductType } from "@/app/types"
 
 function Product({ data }: { data: ProductType }) {
   return (

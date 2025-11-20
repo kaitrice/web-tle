@@ -1,6 +1,6 @@
-import { Article } from "@/types";
+import { fetchData } from "@lib";
+import { Article } from "@types";
 import { Card } from "../Card";
-import { fetchData } from "@/app/lib/fetchData";
 
 export async function News() {
   const articles: Article[] = await fetchData("articles")
