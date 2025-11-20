@@ -1,10 +1,9 @@
-import type { Album } from "./album.type";
-import type { Artist } from "./artist.type";
-import type { Streaming } from "./streaming.type";
-import type { Track } from "./track.type";
-import type { Shows, Show } from "./shows.type";
-import type { Article } from "./article.type";
-import type { Member } from "./member.type";
-import type { Product } from "./product.type";
-
-export type { Album, Artist, Streaming, Track, Shows, Show, Article, Member, Product }
+export type { Album } from "./album.type";
+export type { Artist } from "./artist.type";
+export type { Streaming } from "./streaming.type";
+export type { Track } from "./track.type";
+export type { Shows, Show } from "./shows.type";
+export type { Article } from "./article.type";
+export type { Member } from "./member.type";
+export type { Product } from "./product.type";
+export type { SocialMedia } from "./social.type";

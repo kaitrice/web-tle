@@ -4,8 +4,3 @@ export type SocialMedia = {
     alt: string;
     disabled: boolean
 }
-
-export type SocialUIProps = {
-  data: SocialMedia;
-  flag: boolean;
-};

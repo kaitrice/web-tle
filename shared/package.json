@@ -1,0 +1,8 @@
+{
+    "name": "shared",
+    "description": "",
+    "author": "",
+    "scripts": {
+        "build": "tsc"
+    }
+}
