@@ -3,13 +3,13 @@ import Store from "@home/Store";
 import Music from "@home/Music";
 import Tour from "@home/Tour";
 
-export default function Home() {
+export default async function Home() {
 	return (
 		<main>
 			<Hero />
 			<div className="text-center">
-				<Store />
-				<Music />
+				{await Store()}
+				{await Music()}
 				<Tour />
 				<div className="w-full border-2" />
 			</div>
