@@ -18,15 +18,15 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    "baseUrl": "app",
     "paths": {
-      "@lib": ["app/lib/fetchData.ts"],
-      "@components/*": ["app/components/*.tsx"],
-      "@about/*": ["app/components/about/*.tsx"],
-      "@home/*": ["app/components/home/*.tsx"],
-      "@types": ["../shared/dist/index.d.ts"],
+      "@lib": ["lib/fetchData.ts"],
+      "@components/*": ["components/*.tsx"],
+      "@about/*": ["components/about/*.tsx"],
+      "@home/*": ["components/home/*.tsx"],
+      "@types": ["types/index.ts"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../shared/dist/*"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
