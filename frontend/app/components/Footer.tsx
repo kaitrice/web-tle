@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Socials from "./Socials"
+import { footer } from "lib/data/footer"
 
 function Subscription() {
   return (
@@ -22,15 +23,15 @@ function Contact() {
     <section className="flex-1 max-w-md">
       <div className="flex flex-col gap-2 pb-2 lg:pb-6">
         <h2 className="uppercase tracking-widest text-xl font-bold mb-2">
-          Management & Bookings
+          {footer.contact.name}
         </h2>
         <p className="text-base">
           Email:&nbsp;
           <Link
-            href="mailto:theluckyeffect77@gmail.com"
+            href={`mailto:${footer.contact.email}`}
             className="hover:underline hover:underline-offset-6"
           >
-            theluckyeffect77@gmail.com
+            {footer.contact.email}
           </Link>
         </p>
       </div>
@@ -44,14 +45,14 @@ function Contact() {
 function Copyright() {
   return (
     <section className="w-full text-center">
-      ©{new Date().getFullYear()} The Lucky Effect, LLC. | Web design by
+      ©{new Date().getFullYear()} {footer.company} | Web design by
       <Link
         className="text-end hover:underline hover:underline-offset-6 pl-1"
-        href="https://kaitrice.com/"
+        href={footer.dev.url}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Kait Rice
+        {footer.dev.name}
       </Link>
     </section>
   )

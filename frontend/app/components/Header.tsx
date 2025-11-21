@@ -3,14 +3,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import Socials from "./Socials"
 import Link from "next/link"
-
-const nav_links = [
-	{ name: "Music", subdir: "/#music" },
-	{ name: "Videos", subdir: "https://www.youtube.com/@TheLuckyEffect77", blank: true },
-	{ name: "Tour", subdir: "/#tour" },
-	{ name: "Store", subdir: "https://store.theluckyeffect.com/", blank: true },
-	{ name: "About", subdir: "/about" },
-]
+import { nav_links } from "lib/data/nav"
 
 function Logo() {
 	return (
