@@ -13,15 +13,12 @@ function Product({ data }: { data: ProductType }) {
         />
       </div>
 
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <h2 className="uppercase font-bold text-xl pb-2">{data.type}</h2>
-        <p className="text-gray-400 uppercase tracking-widest text-sm sm:text-base pb-8">
+      <div className="flex flex-col items-center gap-2 md:items-start text-center md:text-left uppercase">
+        <h2 className="font-bold text-xl">{data.type}</h2>
+        <p className="text-gray-400 tracking-widest text-sm sm:text-base pb-6">
           ${data.price + 0.0} {data.currency}
         </p>
-        <a
-          href={data.url}
-          className="border-2 border-orange-500 font-bold px-4 py-2 hover:opacity-50 cursor-pointer uppercase"
-        >
+        <a href={data.url} className="btn px-4 py-2" >
           shop now
         </a>
       </div>
