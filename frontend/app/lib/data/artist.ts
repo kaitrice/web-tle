@@ -57,19 +57,31 @@ export const artist = {
         tracks: [
           { 
             name: "TRY TO", 
-            links: { spotify: "https://open.spotify.com/track/7GQhaihWmNEHA8oOexLo5B?si=1d9c9074def8424e", apple: "https://music.apple.com/us/song/try-to/1892925339" } 
+            links: { 
+              spotify: "https://open.spotify.com/track/7GQhaihWmNEHA8oOexLo5B?si=1d9c9074def8424e", 
+              apple: "https://music.apple.com/us/song/try-to/1892925339" 
+            } 
           },
           { 
             name: "DAMN SPECIAL", 
-            links: { spotify: "https://open.spotify.com/track/65DEKL74T4JK2zvHJwH3d0?si=d948eeb0593b40ac", apple: "https://music.apple.com/us/song/damn-special/1892925341" } 
+            links: { 
+              spotify: "https://open.spotify.com/track/65DEKL74T4JK2zvHJwH3d0?si=d948eeb0593b40ac", 
+              apple: "https://music.apple.com/us/song/damn-special/1892925341" 
+            } 
           },
           { 
             name: "MONET", 
-            links: { spotify: "https://open.spotify.com/track/3VMzuD5gqoofRCaDORiT9c?si=d416e2ea05a54c3d", apple: "https://music.apple.com/us/song/monet/1892925342" } 
+            links: { 
+              spotify: "https://open.spotify.com/track/3VMzuD5gqoofRCaDORiT9c?si=d416e2ea05a54c3d", 
+              apple: "https://music.apple.com/us/song/monet/1892925342" 
+            } 
           },
           { 
             name: "WATCH YOUR SPEED", 
-            links: { spotify: "https://open.spotify.com/track/3b2WFL7xRklRWFdLUON8nq?si=3d36c116b3694401", apple: "https://music.apple.com/us/song/watch-your-speed/1892925343" } 
+            links: { 
+              spotify: "https://open.spotify.com/track/3b2WFL7xRklRWFdLUON8nq?si=3d36c116b3694401", 
+              apple: "https://music.apple.com/us/song/watch-your-speed/1892925343" 
+            } 
           }
         ],
         released: new Date("2025-06-05"),
