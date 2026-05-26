@@ -1,6 +1,6 @@
 import Image from "next/image";
+import { artist as artist_data } from "lib/data/artist";
 import { Streaming, Album as AlbumType, Artist } from "@types";
-import { fetchData } from "@lib";
 
 function AlbumCover({ img, alt }: { img: string; alt: string }) {
   return (
@@ -53,7 +53,7 @@ function Album({ data }: { data: AlbumType }) {
 }
 
 export default async function Music() {
-  const artist: Artist = await fetchData("artist")
+  const artist: Artist = artist_data
 
   if (!artist) return (
     <section id="music">

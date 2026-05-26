@@ -1,9 +1,9 @@
-import { fetchData } from "@lib";
+import { articles as article_data } from "lib/data/articles";
 import { Article } from "@types";
 import { Card } from "../Card";
 
 export async function News() {
-  const articles: Article[] = await fetchData("articles")
+  const articles: Article[] = article_data
   
   return (
     <section id="news" className="pb-6">

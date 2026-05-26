@@ -1,4 +1,4 @@
-import { fetchData } from "@lib"
+import { products as product_data } from "lib/data/products";
 import { Product as ProductType } from "@types"
 import { Card } from "../Card"
 
@@ -27,7 +27,7 @@ function Product({ data }: { data: ProductType }) {
 }
 
 export default async function Store() {
-  const products: ProductType[] = await fetchData("products")
+  const products: ProductType[] = product_data
 
   return (
     <section id="store" className="pt-12 px-6 xl:px-60">

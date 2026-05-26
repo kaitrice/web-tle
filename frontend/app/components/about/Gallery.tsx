@@ -1,9 +1,9 @@
-import { fetchData } from "@lib";
+import { members as member_data } from "lib/data/members";
 import { Member } from "@types";
 import { Card } from "../Card";
 
 export async function BandGallery() {
-  const members: Member[] = await fetchData("members")
+  const members: Member[] = member_data
 
   return (
     <section id="band" className="w-full pb-6">

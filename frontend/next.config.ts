@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
         hostname: 'highwiredaze.b-cdn.net',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'is1-ssl.mzstatic.com',
+        pathname: '/**',
+      },
     ],
   },
 };
