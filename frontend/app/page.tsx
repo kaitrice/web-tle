@@ -8,8 +8,8 @@ export default async function Home() {
 		<main>
 			<Hero />
 			<div className="text-center">
-				{await Store()}
 				{await Music()}
+				{await Store()}
 				<Tour />
 				<div className="w-full border-2" />
 			</div>
